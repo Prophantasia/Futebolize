@@ -4,7 +4,7 @@
 
 ### **Funcionalidades**:
 
---Usuário--
+**Usuário pessoa 👤**:
 Realizar cadastro
 Realizar login
 Buscar por quadras
@@ -13,7 +13,7 @@ Verificar saldo
 Favoritar quadras
 
 
---Dono--
+**Dono 👤**: 
 Realizar cadastro da quadra
 Definir quantidade máxima de jogadores
 Verificar saldo
@@ -21,7 +21,7 @@ Excluir quadra
 Editar quadra
 
 
---Futebolize--
+**Futebolize ⚽**:
 Armazena reservas
 Armazena quadras
 Valida pagamentos
