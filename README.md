@@ -3,6 +3,32 @@
 ### Sobre: Futebolize tem como finalidade conectar jogadores que buscam partidas e donos de quadras que buscam alugá-las através de tecnologia.
 
 ### **Funcionalidades**:
+
+--Usuário--
+Realizar cadastro
+Realizar login
+Buscar por quadras
+Reservar vaga em jogos
+Verificar saldo
+Favoritar quadras
+
+
+--Dono--
+Realizar cadastro da quadra
+Definir quantidade máxima de jogadores
+Verificar saldo
+Excluir quadra
+Editar quadra
+
+
+--Futebolize--
+Armazena reservas
+Armazena quadras
+Valida pagamentos
+Recebe pagamentos
+Repassa pagamentos
+
+**OBS: O algoritmo de transação financeira é ficticio. Será realizado sem frameworks e APIs externas.**
  
 ### 📋 **Diagrama MER**:
 
