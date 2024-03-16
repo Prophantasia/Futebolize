@@ -1,32 +1,32 @@
-# Futebolize ⚽ - <a href="https://lucid.app/lucidspark/a883486a-640b-4835-9fce-838986ea986a/edit?viewport_loc=-118%2C-493%2C3553%2C1786%2C0_0&invitationId=inv_df86c35e-0232-4099-83db-ac3b3beb64de" target="_blank">UML</a>
+# Futebolize ⚽ 
 
 ### Sobre: Futebolize tem como finalidade conectar jogadores que buscam partidas e donos de quadras que buscam alugá-las através de tecnologia.
 
 ### **Funcionalidades**:
 
-**Usuário pessoa 👤**:
-Realizar cadastro
+**Usuário pessoa 👤**:<br>
+Realizar cadastro<br>
 Realizar login
-Buscar por quadras
-Reservar vaga em jogos
-Verificar saldo
-Favoritar quadras
+<br>Buscar por quadras
+<br>Reservar vaga em jogos
+<br>Verificar saldo
+<br>Favoritar quadras
 
 
 **Dono 👤**: 
-Realizar cadastro da quadra
-Definir quantidade máxima de jogadores
-Verificar saldo
-Excluir quadra
-Editar quadra
+<br>Realizar cadastro da quadra 
+<br>Definir quantidade máxima de jogadores
+<br>Verificar saldo
+<br>Excluir quadra
+<br>Editar quadra
 
 
 **Futebolize ⚽**:
-Armazena reservas
-Armazena quadras
-Valida pagamentos
-Recebe pagamentos
-Repassa pagamentos
+<br>Armazena reservas
+<br>Armazena quadras
+<br>Valida pagamentos
+<br>Recebe pagamentos
+<br>Repassa pagamentos
 
 **OBS: O algoritmo de transação financeira é ficticio. Será realizado sem frameworks e APIs externas.**
  
