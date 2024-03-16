@@ -40,13 +40,13 @@ Realizar login
 ### 📋 **Diagrama de casos de uso**:
 ![image](https://github.com/Prophantasia/futebolize/assets/98701412/d52bb600-8ba9-40dc-b5bb-46cbee3b84fb)
 
-🖥️ ### **Tela inicial** :
+ ### 🖥️ **Tela inicial** :
 ![image](https://github.com/Prophantasia/futebolize/assets/142766165/078a9218-2607-43d4-a11a-7580ec89fb3e)
 
-🖥️ ### **Tela de Login** :
+ ### 🖥️ **Tela de Login** :
 ![image](https://github.com/Prophantasia/futebolize/assets/142766165/88592e86-9ae5-4cca-9089-4b66f2329c06)
 
-🖥️ ### **Tela das Quadras** :
+ ### 🖥️ **Tela das Quadras** :
 ![image](https://github.com/Prophantasia/futebolize/assets/142766165/4a5d490a-064e-44a8-a645-d4cda8caa6ae)
 
 
