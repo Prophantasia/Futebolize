@@ -1,0 +1,126 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(59, 58, 58);
+}
+
+@font-face {
+    font-family: 'GhotamBold';
+    src: url('../assets/fonts/GhotamBold.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'GhotamNormal';
+    src: url('../assets/fonts/GothamNormal.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+body {
+    overflow: auto;
+    background-size: contain;
+
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'GhotamNormal';
+    font-weight: normal;
+}
+
+a:hover {
+    opacity: 0.7s;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+}
+
+.area-login {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1e1e;
+    width: 360px;
+    height: 700px;
+    padding: 35px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.login form {
+    background-color: #1f1e1e;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.login input {
+    color: #CBD0F7;
+    background-color: rgb(58, 58, 58);
+    border: none;
+    height: 45px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-family: 'GhotamNormal';
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.login p {
+    margin-top: 20px;
+    background-color: #1f1e1e;
+    font-family: 'GhotamBold';
+    color: #CBD0F7;
+}
+
+.login a {
+    background-color: #1f1e1e;
+    color: #CBD0F7;
+}
+
+.login p a {
+    background-color: #1f1e1e;
+    font-family: 'GhotamBold';
+    color: #6161bd;
+}
+
+.login img {
+    background-color: #1f1e1e;
+    width: 200px;
+    height: auto;
+}
+
+input::placeholder {
+    color: #CBD0F7;
+    font-size: 14px;
+    font-family: 'GhotamNormal';
+}
+
+form [type="submit"] {
+    display: block;
+    background-color: #6161bd;
+    font-size: 20px;
+    font-family: 'GhotamBold';
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+

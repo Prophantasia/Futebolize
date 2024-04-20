@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- @Desenvolvido por: Rafael Soares-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <title>Futebolize</title>
+  <link rel="icon" href="../assets/images/ball.ico">
+  <link href="../css/cadastro.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- Conteúdo -->
+<main>
+  <section class="area-login">
+
+    <div class="login">
+      <div>
+        <a href="../index.html">
+          <img class="logo" src="../assets/images/logo.png"></a>
+      </div>
+
+      <!-- Elemento de conexão com o banco e backend-->
+      <form action="/cadastrar" method="post">
+
+        <!-- Elementos do form-->
+        <p>E-mail:</p>
+        <input
+                type="text"
+                name="emailLogin"
+                placeholder="Digite seu e-mail" autofocus
+                required
+                minlength="1" />
+
+        <p>Nome completo:</p>
+        <input
+                type="text"
+                name="nameLogin"
+                placeholder="Digite seu nome e sobrenome"
+                required
+                minlength="1" />
+
+        <p>Endereço:</p>
+        <input
+                type="text"
+                name="addressLogin"
+                placeholder="Digite seu endereço"
+                required
+                minlength="1" />
+
+        <p>Telefone:</p>
+        <input
+                type="text"
+                name="phoneLogin"
+                placeholder="Digite seu telefone (apenas os números)"
+                required
+                minlength="11"
+                maxlength="11" />
+
+        <p>CPF:</p>
+        <input
+                type="text"
+                name="cpfLogin"
+                placeholder="Digite seu CPF"
+                required
+                minlength="11"
+                maxlength="11" />
+
+        <p>Senha:</p>
+        <input
+                type="password"
+                name="passLogin"
+                placeholder="Digite sua senha"
+                required
+                minlength="1" />
+
+        <button type="submit">Create</button>
+
+      </form>
+    </div>
+  </section>
+</main>
+
+<script src="/javascript/script.js"></script>
+</body>
+
+</html>
