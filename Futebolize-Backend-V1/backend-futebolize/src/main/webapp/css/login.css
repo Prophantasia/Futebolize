@@ -31,10 +31,6 @@ a {
   font-weight: normal;
 }
 
-a:hover {
-  opacity: 0.7s;
-}
-
 .logo {
   height: 200px;
   width: 200px;

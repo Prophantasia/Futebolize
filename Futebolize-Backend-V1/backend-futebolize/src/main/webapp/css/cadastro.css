@@ -24,7 +24,6 @@ body {
 
 }
 
-
 a {
     color: white;
     text-decoration: none;
@@ -122,6 +121,7 @@ form [type="submit"] {
     width: 0%;
     height: 0%;
 }
+
 .successMessage p{
     opacity: 0%;
     color: white;
