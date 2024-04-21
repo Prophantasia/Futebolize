@@ -1,3 +1,3 @@
 br\com\futebolize\dao\UserDao.class
 br\com\futebolize\model\User.class
-br\com\futebolize\servlet\LoginServlet.class
+br\com\futebolize\servlet\CadastroUsuServlet.class

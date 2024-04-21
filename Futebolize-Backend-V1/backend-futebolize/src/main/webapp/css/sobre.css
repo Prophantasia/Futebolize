@@ -24,18 +24,12 @@ body {
  background-color: rgb(39,39,39);
 }
 
-
-
 a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
   font-family: 'GhotamBold';
   font-weight: normal;
-}
-
-a:hover {
-  opacity: 0.7s;
 }
 
 .logo {
@@ -147,4 +141,14 @@ nav a img {
 
 .containerSobre{
   text-align: center;
+}
+
+.subtitleSobre {
+  text-align: center;
+  color: green;
+}
+
+.textSobre {
+  margin-left: 2vw;
+  color: white;
 }

@@ -24,18 +24,12 @@ body {
   background-color: rgb(39, 39, 39);
 }
 
-
-
 a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
   font-family: 'GhotamBold';
   font-weight: normal;
-}
-
-a:hover {
-  opacity: 0.7s;
 }
 
 .logo {
@@ -48,7 +42,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(39, 39, 39);
-  height: 8vh;
+  height: 12vh;
   font-family: 'GothamBold', times;
 }
 
@@ -161,6 +155,14 @@ main {
   margin-top: 150px;
 }
 
+.ney {
+  margin-left: 60vw;
+  max-width: 900px;
+  max-height: 900px;
+  position: relative;
+  bottom: 24vh;
+}
+
 h2#link-quadra a {
   color: white;
   text-align: center;
@@ -170,14 +172,6 @@ h2#link-quadra a {
 h2#link-quadra a:hover {
   color: green;
   border-radius: 3px;
-}
-
-.ney {
-  margin-left: 60vw;
-  max-width: 900px;
-  max-height: 900px;
-  position: relative;
-  bottom: 24vh;
 }
 
 footer {
@@ -192,16 +186,4 @@ p {
   font-family: 'GhotamNormal';
   font-weight: normal;
 }
-
-.subtitleSobre {
-  text-align: center;
-  color: green;
-}
-
-.textSobre {
-  margin-left: 2vw;
-  color: white;
-}
-
-
 
