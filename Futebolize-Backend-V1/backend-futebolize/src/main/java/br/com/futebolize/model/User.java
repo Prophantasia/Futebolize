@@ -1,9 +1,9 @@
 package br.com.futebolize.model;
 
 
-//Desenvolvido por: Rafael Soares
+// @Desenvolvido por: Rafael Soares & Matheus Campos
 public class User {
-    private String id;
+
     private String name;
     private String adress;
     private String email;
@@ -11,40 +11,7 @@ public class User {
     private String phone;
     private String cpf;
 
-
-    //Método construtor sem ID
-    public User(String userName, String password, String email, String adress, String cpf, String phone) {
-        this.name = userName;
-        this.password = password;
-        this.email = email;
-        this.adress = adress;
-        this.cpf = cpf;
-        this.phone = phone;
-    }
-
-    //Método Construtor com ID
-    public User(String id, String userName, String adress, String email, String password, String phone, String cpf) {
-        this.id = id;
-        this.name = userName;
-        this.password = password;
-        this.email = email;
-        this.adress = adress;
-        this.cpf = cpf;
-        this.phone = phone;
-    }
-
-    public User() {
-    }
-
-    //Getters & Setters
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
+    // Getters and Setters
     public String getName() {
         return name;
     }
