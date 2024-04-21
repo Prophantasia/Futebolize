@@ -1,0 +1,45 @@
+CREATE TABLE futebolize_dw (
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	id_field INT NOT NULL,
+	id_costumer INT NOT NULL,
+	id_owner INT NOT NULL,
+	belongs_to INT NOT NULL
+)
+
+CREATE TABLE fields (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(300) NOT NULL,
+    score INT,
+    image VARCHAR(300),
+    address VARCHAR(300) NOT NULL,
+    state VARCHAR(100) NOT NULL,
+    max_players INT,
+    rent_value DECIMAL(5,2)
+    deleted_at TIMESTAMP DEFAULT NULL,
+);
+
+CREATE TABLE available_schedules (
+	id_field INT PRIMARY KEY,
+	schedules TIMESTAMP,
+	is_available TINYINT(1) NOT NULL DEFAULT 0
+)
+
+CREATE TABLE owner (
+	id INT AUTO_INCREMENT NOT NULL,
+	name VARCHAR(300) NOT NULL,
+	cnpj INT NOT NULL,
+	phone_number INT NOT NULL,
+	address VARCHAR(300) NOT NULL
+	email VARCHAR(100),
+	password VARCHAR(100)
+)
+
+CREATE TABLE customer (
+	id INT AUTO_INCREMENT NOT NULL,
+	name VARCHAR(300) NOT NULL,
+	cpf INT NOT NULL,
+	address VARCHAR(300) NOT NULL,
+	phone_number INT NOT NULL,
+	email VARCHAR(100),
+	password VARCHAR(100)
+)
