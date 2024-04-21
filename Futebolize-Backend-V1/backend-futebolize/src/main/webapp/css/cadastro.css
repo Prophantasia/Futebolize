@@ -33,10 +33,6 @@ a {
     font-weight: normal;
 }
 
-a:hover {
-    opacity: 0.7s;
-}
-
 .logo {
     height: 200px;
     width: 200px;
@@ -44,7 +40,6 @@ a:hover {
 
 .area-login {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -79,7 +74,7 @@ a:hover {
     padding-left: 10px;
     font-family: 'GhotamNormal';
     font-size: 16px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .login p {
@@ -109,7 +104,8 @@ a:hover {
 input::placeholder {
     color: #CBD0F7;
     font-size: 14px;
-    font-family: 'GhotamNormal';
+    font-family: 'GhotamBold';
+    letter-spacing: 1px;
 }
 
 form [type="submit"] {
@@ -120,6 +116,15 @@ form [type="submit"] {
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+}
+
+.successMessage {
+    width: 0%;
+    height: 0%;
+}
+.successMessage p{
+    opacity: 0%;
+    color: white;
 }
 
 

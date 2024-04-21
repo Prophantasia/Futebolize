@@ -7,12 +7,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-//Desenvolvido por: Rafael Soares
+// @Desenvolvido por: Matheus Campos, Rafael Abrantes & Gabriel Henrique
 public class UserDao {
 
-    //Criação do usuário com os elementos do banco
+    //Envio dos usuários para o banco de dados
     public void createUser(User user) {
-        String SQl = "INSERT INTO COSTUMER (NAME, CPF, ADDRESS, PHONE_NUMBER, EMAIL, PASSWORD) VALUES (?, ?, ?, ?, ?, ?)";
+        String SQl = "INSERT INTO CUSTOMER (NAME, CPF, ADDRESS, PHONE_NUMBER, EMAIL, PASSWORD) VALUES (?, ?, ?, ?, ?, ?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");

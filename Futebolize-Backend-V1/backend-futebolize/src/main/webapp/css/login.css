@@ -107,6 +107,7 @@ input::placeholder {
   color: #CBD0F7;
   font-size: 14px;
   font-family: 'GhotamNormal';
+  letter-spacing: 1px;
 }
 
 form [type="submit"] {

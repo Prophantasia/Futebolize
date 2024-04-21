@@ -33,6 +33,9 @@ public class User {
         this.phone = phone;
     }
 
+    public User() {
+    }
+
     //Getters & Setters
     public String getId() {
         return id;
