@@ -143,12 +143,52 @@ nav a img {
   text-align: center;
 }
 
-.subtitleSobre {
-  text-align: center;
+.titulo h3{
+  margin-right: 5vw;
+  padding-left: 1px;
+  color: darkgreen;
+  text-align: left;
+}
+
+.titulo h3 strong{
+  margin-right: 5vw;
+  padding-left: 1px;
+  color:green;
+  text-align: left;
+}
+.sub1{
   color: green;
+
+}
+.sub2{
+  color: green;
+
+}
+.sub3{
+  color: green;
+
 }
 
 .textSobre {
-  margin-left: 2vw;
+  margin-right: 5vw;
+  padding-left: 50px;
   color: white;
+  text-align: left;
+}
+
+.img-sobre{
+  margin-left: 60vw;
+  max-width: 900px;
+  max-height: 900px;
+  position: relative;
+  bottom: 60vh;
+}
+
+.buttonSobre button{
+  color: white;
+  text-align: center;
+  background-color: green;
+  border-radius: 9px;
+  width: 250px;
+  height: 50px;
 }
