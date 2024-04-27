@@ -1,0 +1,5 @@
+ENTREGA - SEGUNDO MARCO
+
+Versão mais recente da branch master
+
+Funcionalidade "cadastrar" (dependência: Tabela "customer" do banco de dados)
