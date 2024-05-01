@@ -29,6 +29,7 @@ public class AutenticarDao {
                 System.out.println("Usuário: "+resultSet.getString("NAME")+" autenticado com sucesso!");
                 connection.close();
                 return true;
+
             } else {
                 System.out.println("Usuário não encontrado");
                 connection.close();

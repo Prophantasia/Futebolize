@@ -2,6 +2,7 @@ package br.com.futebolize.dao;
 
 import br.com.futebolize.model.User;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,12 +16,12 @@ public class UserDao {
         String SQl = "INSERT INTO CUSTOMER (NAME, CPF, ADDRESS, PHONE_NUMBER, EMAIL, PASSWORD) VALUES (?, ?, ?, ?, ?, ?)";
 
         try {
+            // Realiza a conexão com o banco
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
+            PreparedStatement preparedStatement = connection.prepareStatement(SQl);
             System.out.println("success in database connection");
 
-            PreparedStatement preparedStatement = connection.prepareStatement(SQl);
-
+            // Insere na query os valores
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getCpf());
             preparedStatement.setString(3, user.getAdress());
@@ -28,15 +29,17 @@ public class UserDao {
             preparedStatement.setString(5, user.getEmail());
             preparedStatement.setString(6, user.getPassword());
 
+            // Executa a query
             preparedStatement.execute();
 
-            System.out.println("success in insert user");
 
+            System.out.println("success in insert user");
             connection.close();
 
-        }catch(Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("fail in database connection");
         }
     }
+
 }

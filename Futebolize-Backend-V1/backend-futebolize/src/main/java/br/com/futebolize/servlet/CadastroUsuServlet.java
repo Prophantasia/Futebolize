@@ -1,5 +1,6 @@
 package br.com.futebolize.servlet;
 
+import br.com.futebolize.dao.DatabaseDao;
 import br.com.futebolize.dao.UserDao;
 import br.com.futebolize.model.User;
 
@@ -16,6 +17,10 @@ public class CadastroUsuServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        // Cria o banco de dados caso não exista
+        DatabaseDao databaseDao = new DatabaseDao();
+        databaseDao.createDatabase();
 
         // Inicializa as classes UserDao e User
         User user = new User();
