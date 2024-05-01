@@ -36,4 +36,3 @@ public class CadastroUsuServlet extends HttpServlet {
         response.sendRedirect("/html/login.html");
     }
 }
-
