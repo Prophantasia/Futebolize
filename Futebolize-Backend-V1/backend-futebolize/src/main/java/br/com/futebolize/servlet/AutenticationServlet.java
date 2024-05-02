@@ -26,8 +26,10 @@ public class AutenticationServlet extends HttpServlet {
         user.setPassword(request.getParameter("passLogin"));
 
         // Realiza a autenticação e vai para a página sobre se logado
-        if(auth.autenticarUser(user))
+        if(auth.autenticarUser(user)){
+            request.getSession().setAttribute("usuario", user);
             response.sendRedirect("/html/quadras.html");
+        }
         else
             response.sendRedirect("/html/login.html");
     }

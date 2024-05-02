@@ -1,6 +1,6 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -21,7 +21,7 @@
 body {
   background-size: contain;
   font-family: 'GhotamNormal';
- background-color: rgb(39,39,39);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
 a {
@@ -41,7 +41,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(39, 39, 39);
   height: 8vh;
   font-family: 'GothamBold', times;
 }

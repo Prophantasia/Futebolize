@@ -2,11 +2,10 @@ package br.com.futebolize.dao;
 
 import br.com.futebolize.model.User;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
 
 // @Desenvolvido por: Matheus Campos, Rafael Abrantes & Gabriel Henrique
 public class UserDao {
