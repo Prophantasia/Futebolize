@@ -32,8 +32,10 @@ a {
 }
 
 .logo {
-    width: 200px;
+    width: 110px;
+    margin-left: 5vw;
     height: auto;
+    padding-top: 20px;
 }
 
 nav {
@@ -176,3 +178,37 @@ p {
     font-family: 'GhotamNormal';
     font-weight: normal;
 }
+
+.quadras{
+
+
+}
+
+.quadras_1 .quadra_1 img{
+   width: 350px;
+    height: 350px;
+
+
+}
+.quadras_1 .quadra_2 img{
+    width: 350px;
+    height: 350px;
+}
+.quadras_1 .quadra_3 img{
+    width: 350px;
+    height: 350px;
+}
+.quadras_2 .quadra_1 img{
+    width: 350px;
+    height: 350px;
+}
+.quadras_2 .quadra_2 img{
+    width: 350px;
+    height: 350px;
+}
+.quadras_2 .quadra_3 img{
+    width: 350px;
+    height: 350px;
+}
+
+

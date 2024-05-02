@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+.logo {
+  width: 110px;
+  margin-left: 5vw;
+  height: auto;
+  padding-top: 20px;
+}
+
 
 @font-face {
   font-family: 'GhotamBold';
@@ -30,11 +37,6 @@ a {
   transition: 0.3s;
   font-family: 'GhotamBold';
   font-weight: normal;
-}
-
-.logo {
-  width: 200px;
-  height: auto;
 }
 
 nav {
@@ -145,6 +147,7 @@ nav a img {
 .titulo h3{
   margin-right: 5vw;
   padding-left: 1px;
+  margin-top: 5vw;
   color: darkgreen;
   text-align: left;
 }
@@ -152,6 +155,7 @@ nav a img {
 .titulo h3 strong{
   margin-right: 5vw;
   padding-left: 1px;
+  margin-top: 5vw;
   color:green;
   text-align: left;
 }
@@ -190,4 +194,12 @@ nav a img {
   border-radius: 9px;
   width: 250px;
   height: 50px;
+}
+
+footer {
+  background-color: #1f1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
 }
