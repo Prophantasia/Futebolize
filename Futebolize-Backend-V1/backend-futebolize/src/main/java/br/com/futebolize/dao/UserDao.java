@@ -12,7 +12,7 @@ public class UserDao {
 
     //Envio dos usuários para o banco de dados
     public void createUser(User user) {
-        String SQl = "INSERT INTO CUSTOMER (NAME, CPF, ADDRESS, PHONE_NUMBER, EMAIL, PASSWORD) VALUES (?, ?, ?, ?, ?, ?)";
+        String SQl = "INSERT INTO CUSTOMER (NAME, CPF, ADDRESS, PHONE_NUMBER, EMAIL, PASSWORD, NIVEL) VALUES (?, ?, ?, ?, ?, ?, 'default')";
 
         try {
             // Realiza a conexão com o banco

@@ -17,6 +17,7 @@ public class DatabaseDao {
                 "PHONE_NUMBER VARCHAR(11) NOT NULL," +
                 "EMAIL VARCHAR(50)," +
                 "PASSWORD VARCHAR(30)," +
+                "NIVEL VARCHAR(30)," +
                 "PRIMARY KEY (ID));";
 
         try {
@@ -28,5 +29,22 @@ public class DatabaseDao {
         } catch (SQLException err) {
             System.out.println("Erro ao criar a tabela CUSTOMER. ERRO: "+err.getMessage());
         }
+
+        // Cria o usuário Admin ao inicializar o banco
+        sql = "INSERT INTO CUSTOMER (NAME, CPF, ADDRESS, PHONE_NUMBER, EMAIL, PASSWORD, NIVEL)" +
+                "SELECT 'Admin', ' ', ' ', ' ', 'admin', '123@mudar', 'admin'" +
+                "WHERE NOT EXISTS(" +
+                "SELECT 1 FROM CUSTOMER WHERE EMAIL = 'admin');";
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.execute();
+            System.out.println("Admin inserido com sucesso!");
+            ps.close();
+        } catch (SQLException err) {
+            System.out.println("Erro ao criar o usuário Admin. ERRO: "+err.getMessage());
+        }
+
+
     }
 }
