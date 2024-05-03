@@ -9,14 +9,13 @@ Realizar cadastro<br>
 Realizar login
 <br>Buscar por quadras
 <br>Reservar vaga em jogos
-<br>Verificar saldo
+<br>Verificar reserva
 <br>Favoritar quadras
 
 
 **Dono 👤**: 
 <br>Realizar cadastro da quadra 
 <br>Definir quantidade máxima de jogadores
-<br>Verificar saldo
 <br>Excluir quadra
 <br>Editar quadra
 
