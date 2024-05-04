@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+  font-family: 'GhotamBold';
+  src: url('../assets/fonts/GhotamBold.otf') format('opentype');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'GhotamNormal';
+  src: url('../assets/fonts/GothamNormal.otf') format('opentype');
+  font-weight: normal;
+}
+
+
+body {
+  background-size: contain;
+  font-family: 'GhotamNormal';
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: 'GhotamBold';
+  font-weight: normal;
+}
+
+.logo {
+  width: 150px;
+  margin-left: 5vw;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  font-family: 'GothamBold', times;
+}
+
+nav a img {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  padding-right: 50px;
+}
+
+.nav-list li a:hover {
+  color: #5dc65d;
+  border-radius: 3px;
+}
+
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100vw;
+    height: 92vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    z-index: 9999;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+
+main {
+  align-items: center;
+  margin-top: 150px;
+}
+
+.ney {
+  margin-left: 60vw;
+  max-width: 900px;
+  max-height: 900px;
+  position: relative;
+  bottom: 24vh;
+}
+
+h2#link-quadra a {
+  color: #fafafa;
+  margin-top: 20px;
+}
+
+h2#link-quadra a:hover {
+  color: #fed21c;
+  border-radius: 3px;
+}
+
+footer {
+  background-color: #1f1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.catch-phrase-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
+.catch-phrase-main p {
+  font-size: 25px;
+  font-family: 'GhotamBold';
+  font-weight: normal;
+  height: 30px;
+  align-content: center;
+  border-right: 4px solid;
+  width: 30ch;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  animation: typing 5s steps(30), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+nav a {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 30px;
+}

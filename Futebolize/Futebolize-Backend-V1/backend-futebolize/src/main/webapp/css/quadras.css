@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'GhotamBold';
+    src: url('../assets/fonts/GhotamBold.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'GhotamNormal';
+    src: url('../assets/fonts/GothamNormal.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+body {
+    background-size: contain;
+    font-family: 'GhotamNormal';
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'GhotamBold';
+    font-weight: normal;
+}
+
+.logo {
+    width: 110px;
+    margin-left: 5vw;
+    height: auto;
+    padding-top: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    font-family: 'GothamBold', times;
+}
+
+nav a img {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    padding-right: 50px;
+}
+
+.nav-list li a:hover {
+    color: green;
+    border-radius: 3px;
+}
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(39, 39, 39);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        z-index: 9999;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.catch-phrase-main h1 {
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    margin-left: 5vw;
+}
+
+.catch-phrase-main h2 {
+    margin-top: 6vh;
+}
+
+main {
+    align-items: center;
+    margin-top: 150px;
+}
+
+h2#link-quadra a {
+    color: white;
+    text-align: center;
+    margin-left: 45vw;
+}
+
+h2#link-quadra a:hover {
+    color: green;
+    border-radius: 3px;
+}
+
+footer {
+    background-color: RGB(30, 30, 30);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    font-family: 'GhotamNormal';
+    font-weight: normal;
+    color: #eeeeee;
+}
+
+
+.quadras_1{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quadras_1 .quadra_1 img{
+   width: 350px;
+    height: 350px;
+    padding-left: 200px;
+    border-radius: 8px;
+}
+
+.quadras_1 .quadra_1 p{
+    padding-left: 250px;
+}
+
+.quadras_1 .quadra_2 img{
+    width: 350px;
+    height: 350px;
+    padding-left: 200px;
+    border-radius: 8px;
+}
+
+.quadras_1 .quadra_2 p{
+    padding-left: 250px;
+}
+
+.quadras_1 .quadra_3 img{
+    width: 350px;
+    height: 350px;
+    padding-left: 200px;
+    border-radius: 8px;
+}
+
+.quadras_1 .quadra_3 p{
+    padding-left: 250px;
+}
+
+.quadras_2{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quadras_2 .quadra_1 img{
+    width: 350px;
+    height: 350px;
+    padding-left: 200px;
+    border-radius: 8px;
+}
+
+.quadras_2 .quadra_1 p{
+    padding-left: 250px;
+}
+.quadras_2 .quadra_2 img{
+    width: 350px;
+    height: 350px;
+    padding-left: 200px;
+    border-radius: 8px;
+}
+
+.quadras_2 .quadra_2 p{
+    padding-left: 250px;
+}
+
+.quadras_2 .quadra_3 img{
+    width: 350px;
+    height: 350px;
+    padding-left: 200px;
+    border-radius: 8px;
+}
+
+.quadras_2 .quadra_3 p{
+    padding-left: 250px;
+}
+
+
