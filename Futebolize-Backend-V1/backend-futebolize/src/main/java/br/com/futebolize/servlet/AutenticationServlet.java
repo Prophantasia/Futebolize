@@ -17,6 +17,10 @@ public class AutenticationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // Cria o banco de dados caso não exista
+        DatabaseDao databaseDao = new DatabaseDao();
+        databaseDao.createDatabase();
+
         // Inicializa as classe User
         User user = new User();
         AutenticarDao auth = new AutenticarDao();
