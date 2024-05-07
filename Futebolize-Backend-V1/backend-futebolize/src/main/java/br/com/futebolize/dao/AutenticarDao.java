@@ -36,6 +36,7 @@ public class AutenticarDao {
                 return false;
             }
 
+
         } catch (SQLException e) {
             System.out.println("Falha na conexão com o banco de dados");
             System.out.println(e.getMessage());

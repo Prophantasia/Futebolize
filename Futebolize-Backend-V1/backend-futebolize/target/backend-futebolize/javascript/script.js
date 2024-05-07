@@ -1,4 +1,4 @@
-//@Desenvolvido por: Matheus Campos
+// @Desenvolvido por: Matheus Campos
 
 // Navegação mobile + responsividade
 class MobileNavbar {
@@ -44,3 +44,4 @@ const mobileNavbar = new MobileNavbar(
 );
 mobileNavbar.init();
 ////////////////////////////////////////
+

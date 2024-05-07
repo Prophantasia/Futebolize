@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-  <!-- @Desenvolvido por: Rafael Soares-->
+  <!-- @Desenvolvido por: Matheus Campos & Rafael Abrantes -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
   <title>Futebolize</title>
@@ -18,7 +19,7 @@
     <div class="login">
       <div>
         <a href="../index.html">
-          <img class="logo" src="../assets/images/logo.png"></a>
+          <img class="logo" src="../assets/images/logo.png" alt="Logo"></a>
       </div>
 
       <!-- Elemento de conexão com o banco e backend-->
@@ -26,28 +27,62 @@
 
         <!-- Elementos do form-->
         <p>E-mail:</p>
-        <input type="text" name="emailLogin" placeholder="Digite seu e-mail" autofocus>
+        <input
+                type="text"
+                name="emailLogin"
+                placeholder="Digite seu e-mail" autofocus
+                required
+                minlength="1" />
+
         <p>Nome completo:</p>
-        <input type="text" name="nameLogin" placeholder="Digite seu nome e sobrenome">
+        <input
+                type="text"
+                name="nameLogin"
+                placeholder="Digite seu nome e sobrenome"
+                required
+                minlength="1" />
+
         <p>Endereço:</p>
-        <input type="text" name="adressLogin" placeholder="Digite seu endereço">
+        <input
+                type="text"
+                name="addressLogin"
+                placeholder="Digite seu endereço"
+                required
+                minlength="1" />
+
         <p>Telefone:</p>
-        <input type="text" name="phoneLogin" placeholder="Digite seu telefone (00 00000-0000)">
+        <input
+                type="text"
+                name="phoneLogin"
+                placeholder="Digite seu telefone (apenas os números)"
+                required
+                minlength="11"
+                maxlength="11" />
+
         <p>CPF:</p>
-        <input type="text" placeholder="Digite seu CPF">
+        <input
+                type="text"
+                name="cpfLogin"
+                placeholder="Digite seu CPF"
+                required
+                minlength="11"
+                maxlength="11" />
+
         <p>Senha:</p>
-        <input type="password" name="passLogin" placeholder="Digite sua senha">
-        <button type="submit">Create</button>
+        <input
+                type="password"
+                name="passLogin"
+                placeholder="Digite sua senha"
+                required
+                minlength="1" />
+        <input type="submit" value="CADASTRAR-SE"></input>
 
       </form>
-
-
-
     </div>
   </section>
 </main>
 
-<script src="/javascript/script.js"></script>
+<script src="../javascript/script.js"></script>
 </body>
 
 </html>

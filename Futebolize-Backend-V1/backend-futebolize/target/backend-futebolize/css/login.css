@@ -1,7 +1,6 @@
 * {
-  margin: 0%;
-  padding: 0%;
-  background-color: rgb(59, 58, 58);
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -20,6 +19,7 @@
 
 body {
   overflow: hidden;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
 
@@ -29,15 +29,6 @@ a {
   transition: 0.3s;
   font-family: 'GhotamNormal';
   font-weight: normal;
-}
-
-a:hover {
-  opacity: 0.7s;
-}
-
-.logo {
-  height: 200px;
-  width: 200px;
 }
 
 .area-login {
@@ -53,7 +44,7 @@ a:hover {
   align-items: center;
   background-color: #1f1e1e;
   width: 360px;
-  height: 350px;
+  height: 400px;
   padding: 35px;
   border-radius: 10px;
 }
@@ -66,7 +57,7 @@ a:hover {
 }
 
 .login input {
-  color: #CBD0F7;
+  color: #fefefe;
   background-color: rgb(58, 58, 58);
   border: none;
   height: 45px;
@@ -83,38 +74,58 @@ a:hover {
   margin-top: 20px;
   background-color: #1f1e1e;
   font-family: 'GhotamBold';
-  color: #CBD0F7;
+  color: #fefefe;
 }
 
 .login a {
   background-color: #1f1e1e;
-  color: #CBD0F7;
+  color: #fefefe;
 }
 
 .login p a {
   background-color: #1f1e1e;
   font-family: 'GhotamBold';
-  color: #6161bd;
+  color: #56ab2f;
+}
+
+.login p a:hover {
+  background-position: right center;
+  color: #1b8f98;
+  text-decoration: none;
 }
 
 .login img {
   background-color: #1f1e1e;
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
+.logoDiv {
+  top: 10px;
+}
+
 input::placeholder {
-  color: #CBD0F7;
+  color: #fafafa;
   font-size: 14px;
   font-family: 'GhotamNormal';
+  letter-spacing: 1px;
+}
+
+form [type="submit"]:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
 
 form [type="submit"] {
+  background-image: linear-gradient(to right, #56ab2f 0%, #729744 51%, #1b8f98 100%);
   display: block;
-  background-color: #6161bd;
   font-size: 20px;
   font-family: 'GhotamBold';
   text-transform: uppercase;
+  color: white;
   font-weight: bold;
+  transition: 0.3s;
+  background-size: 400% auto;
   cursor: pointer;
 }

@@ -1,7 +1,6 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    background-color: rgb(59, 58, 58);
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
@@ -21,8 +20,8 @@
 body {
     overflow: auto;
     background-size: contain;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
-
 
 a {
     color: white;
@@ -32,10 +31,6 @@ a {
     font-weight: normal;
 }
 
-a:hover {
-    opacity: 0.7s;
-}
-
 .logo {
     height: 200px;
     width: 200px;
@@ -43,7 +38,6 @@ a:hover {
 
 .area-login {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -54,10 +48,11 @@ a:hover {
     align-items: center;
     background-color: #1f1e1e;
     width: 360px;
-    height: 700px;
+    height: auto;
     padding: 35px;
     border-radius: 10px;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .login form {
@@ -68,7 +63,7 @@ a:hover {
 }
 
 .login input {
-    color: #CBD0F7;
+    color: #fefefe;
     background-color: rgb(58, 58, 58);
     border: none;
     height: 45px;
@@ -78,19 +73,19 @@ a:hover {
     padding-left: 10px;
     font-family: 'GhotamNormal';
     font-size: 16px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .login p {
     margin-top: 20px;
     background-color: #1f1e1e;
     font-family: 'GhotamBold';
-    color: #CBD0F7;
+    color: #fefefe;
 }
 
 .login a {
     background-color: #1f1e1e;
-    color: #CBD0F7;
+    color: #fefefe;
 }
 
 .login p a {
@@ -101,23 +96,48 @@ a:hover {
 
 .login img {
     background-color: #1f1e1e;
-    width: 200px;
+    width: 150px;
     height: auto;
 }
 
 input::placeholder {
-    color: #CBD0F7;
+    color: #fafafa;
     font-size: 14px;
     font-family: 'GhotamNormal';
+    letter-spacing: 1px;
 }
 
-form [type="submit"] {
+
+.btn-grad {
+    background-image: linear-gradient(to right, #56ab2f 0%, #7fab49  51%, #56ab2f  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
     display: block;
-    background-color: #6161bd;
+}
+
+form [type="submit"]:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+form [type="submit"] {
+    background-image: linear-gradient(to right, #56ab2f 0%, #729744  51%, #1b8f98  100%);
+    display: block;
     font-size: 20px;
     font-family: 'GhotamBold';
     text-transform: uppercase;
+    color: white;
     font-weight: bold;
+    transition: 0.3s;
+    background-size: 400% auto;
     cursor: pointer;
 }
-

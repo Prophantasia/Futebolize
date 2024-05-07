@@ -18,13 +18,26 @@ public class DatabaseDao {
                 "EMAIL VARCHAR(50)," +
                 "PASSWORD VARCHAR(30)," +
                 "NIVEL VARCHAR(30)," +
-                "PRIMARY KEY (ID));";
+                "PRIMARY KEY (ID));" +
+
+                "CREATE TABLE IF NOT EXISTS FIELDS (" +
+                "id INT AUTO_INCREMENT PRIMARY KEY," +
+                "name VARCHAR(300) NOT NULL," +
+                "image_path VARCHAR(MAX)," +
+                "score INT," +
+                "address VARCHAR(300) NOT NULL," +
+                "state VARCHAR(100) NOT NULL," +
+                "max_players INT," +
+                "rent_value DECIMAL(5,2));";
+
+
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.execute();
             System.out.println("Tabela CUSTOMER criada!");
+            System.out.println("Tabela FIELDS criada!");
             ps.close();
         } catch (SQLException err) {
             System.out.println("Erro ao criar a tabela CUSTOMER. ERRO: "+err.getMessage());

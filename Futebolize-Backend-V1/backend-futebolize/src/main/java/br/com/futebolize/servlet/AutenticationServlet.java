@@ -2,6 +2,8 @@ package br.com.futebolize.servlet;
 
 import br.com.futebolize.dao.AutenticarDao;
 import br.com.futebolize.model.User;
+import br.com.futebolize.dao.DatabaseDao;
+import br.com.futebolize.dao.SearchFieldDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

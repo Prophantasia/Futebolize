@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <!-- @Desenvolvido por: Matheus Campos-->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
   <title>Futebolize</title>
@@ -11,31 +12,33 @@
 </head>
 
 <body>
-  <!-- Conteúdo -->
-  <main>
-    <section class="area-login">
+<!-- Conteúdo -->
+<main>
+  <section class="area-login">
 
-      <div class="login">
-          <div>
-            <a href="../index.html">
-              <img class="logo" src="../assets/images/logo.png"></a>
-          </div>
-        
-      <form method="post">
+    <div class="login">
+      <div class="logoDiv">
+        <a href="../index.html">
+          <img class="logo" src="../assets/images/logo.png" alt="Logo"></a>
+      </div>
+
+      <form action="/auntenticar" method="post">
+
         <p>Usuário:</p>
-        <input type="text" name="nomeLogin" placeholder="Digite seu usuário" autofocus>
+        <input type="text" name="emailLogin" placeholder="Digite seu usuário" autofocus>
+
         <p>Senha:</p>
-        <input type="password" name="senhaLogin" placeholder="Digite sua senha">
+        <input type="password" name="passLogin" placeholder="Digite sua senha">
         <input type="submit" value="entrar">
       </form>
-      <p>Ainda não tem uma conta?<a href="cadastrar.html"> Criar conta</a></p>
-        
-        
-      </div>
-    </section>
-  </main>
 
-  <script src="script.js"></script>
+      <p>Ainda não tem uma conta?<a href="cadastrar.html"> Criar conta</a></p>
+
+    </div>
+  </section>
+</main>
+
+<script src="../javascript/script.js"></script>
 </body>
 
 </html>

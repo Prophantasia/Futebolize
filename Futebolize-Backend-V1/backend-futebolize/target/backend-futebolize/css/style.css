@@ -1,6 +1,6 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -21,10 +21,8 @@
 body {
   background-size: contain;
   font-family: 'GhotamNormal';
-  background-color: rgb(39, 39, 39);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
-
-
 
 a {
   color: white;
@@ -34,12 +32,9 @@ a {
   font-weight: normal;
 }
 
-a:hover {
-  opacity: 0.7s;
-}
-
 .logo {
-  width: 200px;
+  width: 150px;
+  margin-left: 5vw;
   height: auto;
 }
 
@@ -47,8 +42,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(39, 39, 39);
-  height: 8vh;
+  height: 12vh;
   font-family: 'GothamBold', times;
 }
 
@@ -68,7 +62,7 @@ nav a img {
 }
 
 .nav-list li a:hover {
-  color: green;
+  color: #5dc65d;
   border-radius: 3px;
 }
 
@@ -98,7 +92,6 @@ nav a img {
     right: 0;
     width: 100vw;
     height: 92vh;
-    background-color: rgb(39, 39, 39);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -145,31 +138,11 @@ nav a img {
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
-.catch-phrase h1 {
-  color: white;
-  text-align: center;
-  padding-top: 100px;
-  margin-left: 5vw;
-}
 
-.catch-phrase h2 {
-  margin-top: 6vh;
-}
 
 main {
   align-items: center;
   margin-top: 150px;
-}
-
-h2#link-quadra a {
-  color: white;
-  text-align: center;
-  margin-left: 45vw;
-}
-
-h2#link-quadra a:hover {
-  color: green;
-  border-radius: 3px;
 }
 
 .ney {
@@ -180,15 +153,60 @@ h2#link-quadra a:hover {
   bottom: 24vh;
 }
 
+h2#link-quadra a {
+  color: #fafafa;
+  margin-top: 20px;
+}
+
+h2#link-quadra a:hover {
+  color: #fed21c;
+  border-radius: 3px;
+}
+
 footer {
-  background-color: RGB(30,30,30);
+  background-color: #1f1e1e;
   color: #fff;
   padding: 20px;
   text-align: center;
   margin-top: 50px;
 }
 
-p {
-  font-family: 'GhotamNormal';
+.catch-phrase-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
+.catch-phrase-main p {
+  font-size: 25px;
+  font-family: 'GhotamBold';
   font-weight: normal;
+  height: 30px;
+  align-content: center;
+  border-right: 4px solid;
+  width: 30ch;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  animation: typing 5s steps(30), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+nav a {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 30px;
 }
