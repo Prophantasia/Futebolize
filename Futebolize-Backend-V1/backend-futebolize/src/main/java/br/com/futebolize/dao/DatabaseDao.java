@@ -28,7 +28,16 @@ public class DatabaseDao {
                 "address VARCHAR(300) NOT NULL," +
                 "state VARCHAR(100) NOT NULL," +
                 "max_players INT," +
-                "rent_value DECIMAL(5,2));";
+                "rent_value DECIMAL(5,2));"+
+
+                "CREATE TABLE IF NOT EXISTS OWNER ("+
+                "	id INT AUTO_INCREMENT NOT NULL,"+
+                "	name VARCHAR(100) NOT NULL,"+
+                "	cnpj INT NOT NULL,"+
+                "	phone_number INT NOT NULL,"+
+                "	address VARCHAR(300) NOT NULL,"+
+                "	email VARCHAR(100),"+
+                "	password VARCHAR(100))";
 
 
 
@@ -38,6 +47,7 @@ public class DatabaseDao {
             ps.execute();
             System.out.println("Tabela CUSTOMER criada!");
             System.out.println("Tabela FIELDS criada!");
+            System.out.println("Tabela OWNER criada!");
             ps.close();
         } catch (SQLException err) {
             System.out.println("Erro ao criar a tabela CUSTOMER. ERRO: "+err.getMessage());
