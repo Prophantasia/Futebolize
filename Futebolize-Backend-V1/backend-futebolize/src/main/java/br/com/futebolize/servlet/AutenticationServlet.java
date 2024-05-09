@@ -34,7 +34,7 @@ public class AutenticationServlet extends HttpServlet {
         // Realiza a autenticação e vai para a página sobre se logado
         if(auth.autenticarUser(user)){
             request.getSession().setAttribute("usuario", user);
-            response.sendRedirect("/html/cadastrarQuadras.jsp");
+            response.sendRedirect("/html/perfilDono.jsp");
         }
         else
             response.sendRedirect("/html/login.html");

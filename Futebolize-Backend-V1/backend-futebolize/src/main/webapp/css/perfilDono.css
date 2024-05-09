@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 110px;
+    margin-left: 5vw;
+    height: auto;
+    padding-top: 20px;
+}
+
+
+@font-face {
+    font-family: 'GhotamBold';
+    src: url('../assets/fonts/GhotamBold.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'GhotamNormal';
+    src: url('../assets/fonts/GothamNormal.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+body {
+    background-size: contain;
+    font-family: 'GhotamNormal';
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'GhotamBold';
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    font-family: 'GothamBold', times;
+}
+
+nav a img {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    padding-right: 50px;
+}
+
+.nav-list li a:hover {
+    color: green;
+    border-radius: 3px;
+}
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background-color: rgb(39, 39, 39);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        z-index: 9999;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.area-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1e1e;
+    width: 360px;
+    height: auto;
+    padding: 35px;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.login form {
+    background-color: #1f1e1e;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.login input {
+    color: #fefefe;
+    background-color: rgb(58, 58, 58);
+    border: none;
+    height: 45px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-family: 'GhotamNormal';
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-left: 500px;
+    color: white;
+}
+
+.login p {
+    margin-top: 20px;
+    background-color: #1f1e1e;
+    font-family: 'GhotamBold';
+    color: #fefefe;
+}
+
+.login a {
+    background-color: #1f1e1e;
+    color: #fefefe;
+}
+
+.login p a {
+    background-color: #1f1e1e;
+    font-family: 'GhotamBold';
+    color: #6161bd;
+}
+
+.login img {
+    background-color: #1f1e1e;
+    width: 150px;
+    height: auto;
+}
+
+input::placeholder {
+    color: #fafafa;
+    font-size: 14px;
+    font-family: 'GhotamNormal';
+    letter-spacing: 1px;
+}
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #56ab2f 0%, #7fab49  51%, #56ab2f  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+form [type="submit"]:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+form [type="submit"] {
+    background-image: linear-gradient(to right, #56ab2f 0%, #729744  51%, #1b8f98  100%);
+    display: block;
+    font-size: 20px;
+    font-family: 'GhotamBold';
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    background-size: 400% auto;
+    cursor: pointer;
+}
