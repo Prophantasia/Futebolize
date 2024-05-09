@@ -10,6 +10,15 @@ public class User {
     private String password;
     private String phone;
     private String cpf;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     // Getters and Setters
     public String getName() {
