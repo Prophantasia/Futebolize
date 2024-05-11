@@ -15,7 +15,7 @@
 
 <header>
   <nav>
-    <a href="../index.html">
+    <a href="../index.jsp">
       <img class="logo" src="/assets/images/logo.png"> </a>
     <div class="mobile-menu">
       <div class="line1"></div>
@@ -37,7 +37,7 @@
 
     <div class="login">
       <div>
-        <a href="../index.html">
+        <a href="../index.jsp">
           <img class="logo" src="../assets/images/logo.png" alt="Logo"></a>
       </div>
 
