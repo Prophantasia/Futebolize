@@ -17,26 +17,30 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+//import static jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.parameters;
 import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipartContent;
 
 @WebServlet("/cadastrarQuadra")
 public class CadastroFieldServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+
+        Map<String, String> parameters = uploadImage(request);
 
         // Inicializa as classes Field e FieldDao
         Field field = new Field();
         FieldDao fieldDao = new FieldDao();
+        String image = parameters.get("image");
 
         // Insere os valores no objeto field
-        field.setName(request.getParameter("fieldName"));
-        field.setImage_path(request.getParameter("fieldImagePath"));
-        field.setAddress(request.getParameter("fieldAddress"));
-        field.setState(request.getParameter("fieldState"));
-        field.setMax_players(Integer.parseInt(request.getParameter("maxPlayers")));
-        field.setRent_value(Integer.parseInt(request.getParameter("fieldRentValue")));
+        field.setName(parameters.get("fieldName"));
+        field.setImage_path(parameters.get("image"));
+        field.setAddress(parameters.get("fieldAddress"));
+        field.setState(parameters.get("fieldState"));
+        field.setMax_players(Integer.parseInt(parameters.get("maxPlayers")));
+        field.setRent_value(Integer.parseInt(parameters.get("fieldRentValue")));
 
         // Manda a instância field para a classe Dao
         fieldDao.createField(field);
@@ -76,7 +80,7 @@ public class CadastroFieldServlet extends HttpServlet {
 
         if (fileItem.isFormField()) {
 
-            requestParameters.put(fileItem.getFieldname(), fileItem.getString());
+            requestParameters.put(fileItem.getFieldName(), fileItem.getString());
 
         } else {
 
