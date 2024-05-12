@@ -1,12 +1,10 @@
 package br.com.futebolize.servlet;
 
-import br.com.futebolize.dao.DatabaseDao;
 import br.com.futebolize.dao.FieldDao;
 import br.com.futebolize.model.Field;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.commons.fileupload.servlet.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
