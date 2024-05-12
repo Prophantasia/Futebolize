@@ -42,7 +42,7 @@
       </div>
 
       <!-- Elemento de conexão com o banco e backend-->
-      <form action="/cadastrar" method="post">
+      <form action="/cadastrarQuadra" method="post">
 
         <!-- Elementos do form-->
         <p>Nome da Quadra:</p>
@@ -56,7 +56,7 @@
         <p>Caminho para a imagem da quadra:</p>
         <input
                 type="text"
-                name="fieldPath"
+                name="fieldImagePath"
                 placeholder="informe o diretorio da imagem"
                 required
                 minlength="1" />
@@ -86,7 +86,7 @@
         <p>Valor do aluguel:</p>
         <input
                 type="text"
-                name="fieldValueRent"
+                name="fieldRentValue"
                 placeholder="Informe o valor do aluguel (por jogador)"
                 required />
         <input type="submit" value="CADASTRAR QUADRA!"></input>

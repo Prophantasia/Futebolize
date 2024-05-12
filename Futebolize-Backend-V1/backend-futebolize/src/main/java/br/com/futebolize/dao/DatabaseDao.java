@@ -21,10 +21,10 @@ public class DatabaseDao {
                 "PRIMARY KEY (ID));" +
 
                 "CREATE TABLE IF NOT EXISTS FIELDS (" +
-                "id INT AUTO_INCREMENT PRIMARY KEY," +
+                "id INT AUTO_INCREMENT NOT NULL," +
                 "name VARCHAR(300) NOT NULL," +
                 "image_path VARCHAR(MAX)," +
-                "score INT," +
+                "score INT DEFAULT NULL," +
                 "address VARCHAR(300) NOT NULL," +
                 "state VARCHAR(100) NOT NULL," +
                 "max_players INT," +
