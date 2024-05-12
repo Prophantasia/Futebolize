@@ -3,6 +3,7 @@ package br.com.futebolize.servlet;
 import br.com.futebolize.dao.DatabaseDao;
 import br.com.futebolize.dao.UserDao;
 import br.com.futebolize.model.User;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 
 // @Desenvolvido por: Matheus Campos & Rafael Abrantes
 @WebServlet("/cadastrar")
@@ -33,6 +35,10 @@ public class CadastroUsuServlet extends HttpServlet {
         user.setAdress(request.getParameter("addressLogin"));
         user.setCpf(request.getParameter("cpfLogin"));
         user.setPhone(request.getParameter("phoneLogin"));
+
+        // Realiza a criptografia da senha
+        user.setPassword(DigestUtils.sha256Hex(user.getPassword()));
+
 
         // Manda a instância User para a classe Dao
         userDao.createUser(user);

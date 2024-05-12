@@ -3,13 +3,15 @@ package br.com.futebolize.servlet;
 import br.com.futebolize.dao.AutenticarDao;
 import br.com.futebolize.model.User;
 import br.com.futebolize.dao.DatabaseDao;
-import br.com.futebolize.dao.SearchFieldDao;
+import org.apache.commons.codec.digest.DigestUtils;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 
 // @Desenvolvido por: Matheus Campos
@@ -31,9 +33,12 @@ public class AutenticationServlet extends HttpServlet {
         user.setEmail(request.getParameter("emailLogin"));
         user.setPassword(request.getParameter("passLogin"));
 
+        // Realiza a criptografia da senha
+        user.setPassword(DigestUtils.sha256Hex(user.getPassword()));
+
         // Realiza a autenticação e vai para a página sobre se logado
         if(auth.autenticarUser(user)){
-            request.getSession().setAttribute("usuarioEmail", user.getEmail());
+            request.getSession().setAttribute("usuarioLogado", true);
             response.sendRedirect("/index.jsp");
         }
         else

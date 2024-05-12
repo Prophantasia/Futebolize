@@ -1,8 +1,19 @@
+<%@ page import="br.com.futebolize.model.User" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%// @Desenvolvido por: Matheus Campos & Gabriel Alves %>
+
+<%
+  // Verifica se o atributo na sessão é null
+  if(request.getSession().getAttribute("usuarioLogado") == null)
+    response.sendRedirect("quadras.jsp");
+%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <!-- @Desenvolvido por: Matheus Campos & Rafael Abrantes -->
+  <!-- @Desenvolvido por: Matheus Campos & Rafael Abrantes & Gabriel Alves -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
@@ -23,8 +34,8 @@
       <div class="line3"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="quadras.html">QUADRAS</a></li>
-      <li><a href="sobre.html">SOBRE</a></li>
+      <li><a href="quadras.jsp">QUADRAS</a></li>
+      <li><a href="sobre.jsp">SOBRE</a></li>
       <li><a href="login.html">MEU PERFIL</a></li>
     </ul>
   </nav>
