@@ -1,10 +1,14 @@
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<%// @Desenvolvido por: Matheus Campos %>
+
 <%
-  if(request.getSession().getAttribute("usuarioEmail") != null)
+  // Verifica se o atributo na sessão é diferente de null
+  if(request.getSession().getAttribute("usuarioLogado") != null)
     response.sendRedirect("/html/indexLogado.jsp");
 %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,8 +34,8 @@
       <div class="line3"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="html/quadras.html">QUADRAS</a></li>
-      <li><a href="html/sobre.html">SOBRE</a></li>
+      <li><a href="html/quadras.jsp">QUADRAS</a></li>
+      <li><a href="html/sobre.jsp">SOBRE</a></li>
       <li><a href="html/login.html">LOGIN</a></li>
     </ul>
   </nav>

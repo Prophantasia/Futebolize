@@ -2,7 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    if(request.getSession().getAttribute("usuarioEmail") == null)
+    // Verifica se o atributo na sessão é null
+    if(request.getSession().getAttribute("usuarioLogado") == null)
         response.sendRedirect("../index.jsp");
 %>
 <!DOCTYPE html>
@@ -30,8 +31,8 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-list">
-            <li><a href="quadras.html">QUADRAS</a></li>
-            <li><a href="sobre.html">SOBRE</a></li>
+            <li><a href="quadras.jsp">QUADRAS</a></li>
+            <li><a href="sobre.jsp">SOBRE</a></li>
             <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
             <li><a href="indexLogado.jsp">MEU PERFIL</a></li>
             <li><a href="sair.jsp">SAIR</a></li>
