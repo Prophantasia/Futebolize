@@ -76,7 +76,7 @@ public class CadastroFieldServlet extends HttpServlet {
 
         if (fileItem.isFormField()) {
 
-            requestParameters.put(fileItem.getFieldname(), fileItem.getString());
+            requestParameters.put(fileItem.getFieldName(), fileItem.getString());
 
         } else {
 
