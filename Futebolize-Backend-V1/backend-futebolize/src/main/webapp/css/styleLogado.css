@@ -4,10 +4,10 @@
 }
 
 .logo {
+    padding-left: 30px;
     width: 110px;
-    margin-left: 5vw;
     height: auto;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 
@@ -43,7 +43,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    height: 12vh;
     font-family: 'GothamBold', times;
 }
 

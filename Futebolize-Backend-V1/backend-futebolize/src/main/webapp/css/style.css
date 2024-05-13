@@ -24,7 +24,7 @@ body {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
-a {
+nav a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
@@ -33,8 +33,10 @@ a {
 }
 
 .logo {
-  width: 150px;
+  padding-left: 30px;
+  width: 110px;
   height: auto;
+  padding-top: 30px;
 }
 
 nav {
@@ -45,10 +47,6 @@ nav {
   font-family: 'GothamBold', times;
 }
 
-nav a img {
-  margin-top: 15px;
-  margin-left: 15px;
-}
 
 .nav-list {
   list-style: none;

@@ -1,6 +1,7 @@
 package br.com.futebolize.servlet;
 
 import br.com.futebolize.dao.AutenticarDao;
+import br.com.futebolize.dao.UserDao;
 import br.com.futebolize.model.User;
 import br.com.futebolize.dao.DatabaseDao;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -38,6 +39,15 @@ public class AutenticationServlet extends HttpServlet {
 
         // Realiza a autenticação e vai para a página sobre se logado
         if(auth.autenticarUser(user)){
+
+            // Limpar atributos da sessão antiga
+            request.getSession().removeAttribute("email");
+            request.getSession().removeAttribute("pass");
+            request.getSession().removeAttribute("usuarioLogado");
+
+            // Adicionar atributos para a sessão
+            request.getSession().setAttribute("email", user.getEmail());
+            request.getSession().setAttribute("pass", user.getPassword());
             request.getSession().setAttribute("usuarioLogado", true);
             response.sendRedirect("/index.jsp");
         }

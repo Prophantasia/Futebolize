@@ -6,6 +6,7 @@
     if(request.getSession().getAttribute("usuarioLogado") == null)
         response.sendRedirect("../index.jsp");
 %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Futebolize</title>
     <link rel="icon" href="../assets/images/ball.ico">
-    <link href="../css/perfilDono.css" rel="stylesheet" type="text/css" />
+    <link href="../css/styleLogado.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -34,7 +35,7 @@
             <li><a href="quadras.jsp">QUADRAS</a></li>
             <li><a href="sobre.jsp">SOBRE</a></li>
             <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
-            <li><a href="indexLogado.jsp">MEU PERFIL</a></li>
+            <li><a href="perfil.jsp">MEU PERFIL</a></li>
             <li><a href="sair.jsp">SAIR</a></li>
         </ul>
     </nav>
@@ -42,9 +43,10 @@
 </header>
 
     <h1>
+        <BR><BR><BR>
         Ola! Bem vindo a area do dono Futebolize!
     </h1>
-
+<script src="../javascript/script.js"></script>
 </body>
 
 </html>

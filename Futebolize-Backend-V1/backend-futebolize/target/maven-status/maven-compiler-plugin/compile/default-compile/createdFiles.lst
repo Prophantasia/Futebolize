@@ -1,5 +1,6 @@
 br\com\futebolize\dao\AutenticarDao.class
 br\com\futebolize\dao\SearchFieldDao.class
+br\com\futebolize\servlet\UpdateUserServlet.class
 br\com\futebolize\dao\FieldDao.class
 br\com\futebolize\servlet\SearchFieldsServlet.class
 br\com\futebolize\model\User.class
