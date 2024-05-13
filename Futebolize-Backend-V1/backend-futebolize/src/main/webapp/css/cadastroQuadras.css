@@ -42,7 +42,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    height: 12vh;
     font-family: 'GothamBold', times;
 }
 

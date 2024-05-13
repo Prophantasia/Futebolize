@@ -24,6 +24,7 @@ public class AutenticarDao {
             // Executa a query e guarda o valor na variável resultSet
             ResultSet resultSet = preparedStatement.executeQuery();
 
+
             // Caso encontre registro na consulta
             if (resultSet.next()) {
                 System.out.println("Usuário: "+resultSet.getString("NAME")+" autenticado com sucesso!");
