@@ -1,3 +1,23 @@
+<%@ page import="br.com.futebolize.model.User" %>
+<%@ page import="br.com.futebolize.dao.UserDao" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    // Verifica se o atributo na sessão é null
+    if(request.getSession().getAttribute("usuarioLogado") == null)
+        response.sendRedirect("../index.jsp");
+
+    UserDao userDao = new UserDao();
+    User user = new User();
+
+    // Setando o objeto user de acordo com os atributos da sessão
+    user.setEmail(request.getSession().getAttribute("email").toString());
+    user.setPassword(request.getSession().getAttribute("pass").toString());
+
+    // Metódo para buscar o registro do usuário via email e senha
+    User resp = userDao.buscarUser(user);
+%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -50,7 +70,8 @@
                 <p>E-mail:</p>
                 <input
                         type="text"
-                        name="emailLogin"
+                        value="<%= resp.getEmail()%>"
+                        name="emailPerfil"
                         placeholder="Digite seu e-mail" autofocus
                         required
                         minlength="1" />
@@ -58,7 +79,8 @@
                 <p>Nome completo:</p>
                 <input
                         type="text"
-                        name="nameLogin"
+                        value="<%= resp.getName()%>"
+                        name="namePerfil"
                         placeholder="Digite seu nome e sobrenome"
                         required
                         minlength="1" />
@@ -66,7 +88,8 @@
                 <p>Endereço:</p>
                 <input
                         type="text"
-                        name="addressLogin"
+                        value="<%= resp.getAdress()%>"
+                        name="addressPerfil"
                         placeholder="Digite seu endereço"
                         required
                         minlength="1" />
@@ -74,7 +97,8 @@
                 <p>Telefone:</p>
                 <input
                         type="text"
-                        name="phoneLogin"
+                        value="<%= resp.getPhone()%>"
+                        name="phonePerfil"
                         placeholder="Digite seu telefone (apenas os números)"
                         required
                         minlength="11"
@@ -83,7 +107,8 @@
                 <p>CPF:</p>
                 <input
                         type="text"
-                        name="cpfLogin"
+                        value="<%= resp.getCpf()%>"
+                        name="cpfPerfil"
                         placeholder="Digite seu CPF"
                         required
                         minlength="11"
@@ -92,11 +117,12 @@
                 <p>Senha:</p>
                 <input
                         type="password"
-                        name="passLogin"
-                        placeholder="Digite sua senha"
+                        value=""
+                        name="passPerfil"
+                        placeholder="Digite sua nova senha"
                         required
                         minlength="1" />
-                <input type="submit" value="CADASTRAR-SE"></input>
+                <input type="submit" value="ATUALIZAR"></input>
 
             </form>
         </div>

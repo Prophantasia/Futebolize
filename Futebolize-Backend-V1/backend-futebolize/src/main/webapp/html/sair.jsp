@@ -10,7 +10,10 @@
 --%>
 
 <%
-    session.invalidate();
+    request.getSession().removeAttribute("email");
+    request.getSession().removeAttribute("pass");
+    request.getSession().removeAttribute("usuarioLogado");
+    request.getSession().invalidate();
     response.sendRedirect("../index.jsp");
 %>
 
