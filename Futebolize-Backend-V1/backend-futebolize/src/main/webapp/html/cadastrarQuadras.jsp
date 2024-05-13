@@ -53,7 +53,7 @@
       </div>
 
       <!-- Elemento de conexão com o banco e backend-->
-      <form action="/cadastrarQuadra" method="post">
+      <form action="/cadastrarQuadra" method="post" enctype="multipart/form-data" > <!---->
 
         <!-- Elementos do form-->
         <p>Nome da Quadra:</p>
@@ -64,13 +64,20 @@
                 required
                 minlength="1" />
 
-        <p>Caminho para a imagem da quadra:</p>
+        <!--<p>Caminho para a imagem da quadra:</p>
         <input
                 type="text"
                 name="fieldImagePath"
                 placeholder="informe o diretorio da imagem"
                 required
-                minlength="1" />
+                minlength="1" />-->
+
+        <p>Imagem:</p>
+        <input
+                type="file"
+                name="image"
+                placeholder="Logradouro da quadra"/>
+
 
         <p>Logradouro:</p>
         <input
@@ -89,18 +96,18 @@
 
         <p>Maximo de jogadores:</p>
         <input
-                type="text"
+                type="number"
                 name="maxPlayers"
                 placeholder="Informe a qtd. maxima de jogadores"
                 required />
 
         <p>Valor do aluguel:</p>
         <input
-                type="text"
+                type="number"
                 name="fieldRentValue"
                 placeholder="Informe o valor do aluguel (por jogador)"
                 required />
-        <input type="submit" value="CADASTRAR QUADRA!"></input>
+        <input type="submit" value="CADASTRAR QUADRA!">
 
       </form>
     </div>

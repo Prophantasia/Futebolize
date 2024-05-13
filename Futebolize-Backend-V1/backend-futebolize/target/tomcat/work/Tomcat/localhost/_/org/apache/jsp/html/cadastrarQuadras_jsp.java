@@ -63,7 +63,7 @@ public final class cadastrarQuadras_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-// @Desenvolvido por: Matheus Campos & Gabriel Alves 
+// @Desenvolvido por: Matheus Campos & Gabriel Alves
       out.write("\r\n");
       out.write("\r\n");
 
@@ -128,13 +128,20 @@ public final class cadastrarQuadras_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                required\r\n");
       out.write("                minlength=\"1\" />\r\n");
       out.write("\r\n");
-      out.write("        <p>Caminho para a imagem da quadra:</p>\r\n");
+      out.write("        <!--<p>Caminho para a imagem da quadra:</p>\r\n");
       out.write("        <input\r\n");
       out.write("                type=\"text\"\r\n");
       out.write("                name=\"fieldImagePath\"\r\n");
       out.write("                placeholder=\"informe o diretorio da imagem\"\r\n");
       out.write("                required\r\n");
-      out.write("                minlength=\"1\" />\r\n");
+      out.write("                minlength=\"1\" />-->\r\n");
+      out.write("\r\n");
+      out.write("        <p>Imagem:</p>\r\n");
+      out.write("        <input\r\n");
+      out.write("                type=\"file\"\r\n");
+      out.write("                name=\"image\"\r\n");
+      out.write("                placeholder=\"Logradouro da quadra\"/>\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("        <p>Logradouro:</p>\r\n");
       out.write("        <input\r\n");
@@ -153,18 +160,18 @@ public final class cadastrarQuadras_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("        <p>Maximo de jogadores:</p>\r\n");
       out.write("        <input\r\n");
-      out.write("                type=\"text\"\r\n");
+      out.write("                type=\"number\"\r\n");
       out.write("                name=\"maxPlayers\"\r\n");
       out.write("                placeholder=\"Informe a qtd. maxima de jogadores\"\r\n");
       out.write("                required />\r\n");
       out.write("\r\n");
       out.write("        <p>Valor do aluguel:</p>\r\n");
       out.write("        <input\r\n");
-      out.write("                type=\"text\"\r\n");
+      out.write("                type=\"number\"\r\n");
       out.write("                name=\"fieldRentValue\"\r\n");
       out.write("                placeholder=\"Informe o valor do aluguel (por jogador)\"\r\n");
       out.write("                required />\r\n");
-      out.write("        <input type=\"submit\" value=\"CADASTRAR QUADRA!\"></input>\r\n");
+      out.write("        <input type=\"submit\" value=\"CADASTRAR QUADRA!\">\r\n");
       out.write("\r\n");
       out.write("      </form>\r\n");
       out.write("    </div>\r\n");
