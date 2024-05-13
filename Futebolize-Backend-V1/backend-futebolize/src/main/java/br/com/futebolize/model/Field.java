@@ -9,9 +9,18 @@ public class Field {
     private String address;
     private String state;
 
+    public String getRent_value() {
+        return rent_value;
+    }
+
+    public void setRent_value(String rent_value) {
+        this.rent_value = rent_value;
+    }
+
+    private String rent_value;
+
     private int score;
     private int max_players;
-    private double rent_value;
 
     public String getName() {
         return name;
@@ -61,12 +70,6 @@ public class Field {
         this.max_players = max_players;
     }
 
-    public double getRent_value() {
-        return rent_value;
-    }
 
-    public void setRent_value(double rent_value) {
-        this.rent_value = rent_value;
-    }
 
 }

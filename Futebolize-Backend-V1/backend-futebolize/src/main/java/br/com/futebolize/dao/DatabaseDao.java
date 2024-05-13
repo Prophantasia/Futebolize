@@ -30,7 +30,7 @@ public class DatabaseDao {
                 "address VARCHAR(300) NOT NULL," +
                 "state VARCHAR(100) NOT NULL," +
                 "max_players INT," +
-                "rent_value DECIMAL(5,2));"+
+                "rent_value VARCHAR(15));"+
 
                 "CREATE TABLE IF NOT EXISTS OWNER ("+
                 "	id INT AUTO_INCREMENT NOT NULL,"+

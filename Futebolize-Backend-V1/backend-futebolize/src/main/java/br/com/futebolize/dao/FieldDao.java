@@ -23,7 +23,7 @@ public class FieldDao {
             preparedStatement.setString(3, field.getAddress());
             preparedStatement.setString(4, field.getState());
             preparedStatement.setInt(5, field.getMax_players());
-            preparedStatement.setDouble(6, field.getRent_value());
+            preparedStatement.setString(6, field.getRent_value());
 
             // Executa a query
             preparedStatement.execute();

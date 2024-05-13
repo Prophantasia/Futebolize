@@ -103,9 +103,9 @@
 
         <p>Valor do aluguel:</p>
         <input
-                type="number"
+                type="text"
                 name="fieldRentValue"
-                placeholder="Informe o valor do aluguel (por jogador)"
+                placeholder="Valor por jogador"
                 required />
         <input type="submit" value="CADASTRAR QUADRA!">
 
