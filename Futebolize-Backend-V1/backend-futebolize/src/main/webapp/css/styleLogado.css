@@ -4,9 +4,10 @@
 }
 
 .logo {
+    padding-left: 30px;
     width: 110px;
     height: auto;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 
@@ -177,6 +178,11 @@ nav a img {
     font-family: 'GhotamNormal';
     font-size: 16px;
     letter-spacing: 1px;
+}
+
+h1 {
+    margin-left: 500px;
+    color: white;
 }
 
 .login p {
