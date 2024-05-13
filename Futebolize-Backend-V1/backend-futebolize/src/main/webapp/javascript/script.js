@@ -44,14 +44,3 @@ const mobileNavbar = new MobileNavbar(
 );
 mobileNavbar.init();
 ////////////////////////////////////////
-
-function createDiv(qtdQuadras) {
-  var divContainer = document.getElementById("divContainer")
-
-  for (var i = 0; i < qtdQuadras; i++) {
-    var div = document.createElement("div")
-    div.textContent = "Div" + (i + 1);
-    divContainer.appendChild(div);
-  }
-}
-
