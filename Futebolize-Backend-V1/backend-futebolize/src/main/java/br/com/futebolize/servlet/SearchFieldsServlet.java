@@ -12,16 +12,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 
 @WebServlet("/imagemQuadra")
 public class SearchFieldsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        SearchFieldDao searchFieldDao = new SearchFieldDao();
+        String SQL = "SELECT COUNT(ID) FROM FIELDS";
 
-        String imagePath = searchFieldDao.showFields(); // armazena o resultado de showFields() na variavel imagePath
-        request.setAttribute("imagePath", imagePath); // Define o caminho da imagem como atributo de solicitação
-        request.getRequestDispatcher("quadras.html").forward(request, response); // Redireciona para a página quadras.html
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            System.out.println("success in database connection");
+
+
+
+        } catch (Exception e) {
+
+            System.out.println(e.getMessage());
+            System.out.println("fail in database connection");
+
+        }
+
+
     }
 }

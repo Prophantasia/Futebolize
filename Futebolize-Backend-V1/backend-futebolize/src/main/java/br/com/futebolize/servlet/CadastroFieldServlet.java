@@ -38,7 +38,7 @@ public class CadastroFieldServlet extends HttpServlet {
         field.setAddress(parameters.get("fieldAddress"));
         field.setState(parameters.get("fieldState"));
         field.setMax_players(Integer.parseInt(parameters.get("maxPlayers")));
-        field.setRent_value(Integer.parseInt(parameters.get("fieldRentValue")));
+        field.setRent_value(parameters.get("fieldRentValue"));
 
         // Manda a instância field para a classe Dao
         fieldDao.createField(field);

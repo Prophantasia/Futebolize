@@ -63,7 +63,7 @@ public final class cadastrarQuadras_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-// @Desenvolvido por: Matheus Campos & Gabriel Alves 
+// @Desenvolvido por: Matheus Campos & Gabriel Alves
       out.write("\r\n");
       out.write("\r\n");
 
@@ -167,9 +167,9 @@ public final class cadastrarQuadras_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("        <p>Valor do aluguel:</p>\r\n");
       out.write("        <input\r\n");
-      out.write("                type=\"number\"\r\n");
+      out.write("                type=\"text\"\r\n");
       out.write("                name=\"fieldRentValue\"\r\n");
-      out.write("                placeholder=\"Informe o valor do aluguel (por jogador)\"\r\n");
+      out.write("                placeholder=\"Valor por jogador\"\r\n");
       out.write("                required />\r\n");
       out.write("        <input type=\"submit\" value=\"CADASTRAR QUADRA!\">\r\n");
       out.write("\r\n");
