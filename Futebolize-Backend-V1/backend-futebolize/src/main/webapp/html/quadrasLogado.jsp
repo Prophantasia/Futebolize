@@ -12,7 +12,12 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/quadrasLogado.css">
+    <link rel="icon" href="../assets/images/ball.ico">
+    <title>Quadras</title>
 </head>
 <body>
 
@@ -28,8 +33,9 @@
     <ul class="nav-list">
         <li><a href="quadras.jsp">QUADRAS</a></li>
         <li><a href="sobre.jsp">SOBRE</a></li>
-        <li><a href="login.html">LOGIN</a></li>
         <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
+        <li><a href="perfil.jsp">MEU PERFIL</a></li>
+        <li><a href="sair.jsp">SAIR</a></li>
     </ul>
 </nav>
 
@@ -45,6 +51,7 @@
         window.onload = function() {
             var qtdQuadras = <%= qtdQuadrasJava %>
 
+
             function createDiv(qtdQuadras) {
                 var divContainer = document.getElementById("divContainer");
 
@@ -53,7 +60,7 @@
                     div.className = "quadra";
 
                     var img = document.createElement("img");
-                    img.src = "../img/1715560184389-quadraportorico.jpg";
+                    img.src = "../img/1715605541190-jdSuzana.jpeg";
                     img.alt = "Imagem";
                     div.appendChild(img);
 
@@ -73,7 +80,7 @@
         };
     </script>
 
-    Quadras Logado.
+
 
 
 
