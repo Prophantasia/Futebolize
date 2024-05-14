@@ -1,8 +1,17 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: rafae
+  Date: 14/05/2024
+  Time: 16:40
+  To change this template use File | Settings | File Templates.
+--%>
+
+
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="br.com.futebolize.dao.SearchFieldDao"%>
 
-<%// @Desenvolvido por: Matheus Campos %>
+<%// @Desenvolvido por: Rafael Soares %>
 
 <%
     // Verifica se o atributo na sessão é null
@@ -15,7 +24,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/quadrasLogado.css">
+    <link rel="stylesheet" href="../css/quadrasLogadoDefault.css">
     <link rel="icon" href="../assets/images/ball.ico">
     <title>Quadras</title>
 </head>
@@ -31,24 +40,22 @@
         <div class="line3"></div>
     </div>
     <ul class="nav-list">
-        <li><a href="quadras.jsp">QUADRAS</a></li>
-        <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
         <li><a href="perfil.jsp">MEU PERFIL</a></li>
         <li><a href="sair.jsp">SAIR</a></li>
     </ul>
 </nav>
 
-    <div id="divContainer">
+<div id="divContainer">
 
-    </div>
+</div>
 
 
-    <script>
+<script>
     <%
         int qtdQuadrasJava = SearchFieldDao.showFields();
     %>
-        window.onload = function() {
-            var qtdQuadras = <%= qtdQuadrasJava %>
+    window.onload = function() {
+        var qtdQuadras = <%= qtdQuadrasJava %>
 
 
             function createDiv(qtdQuadras) {
@@ -75,9 +82,9 @@
                 }
             }
 
-            createDiv(qtdQuadras);
-        };
-    </script>
+        createDiv(qtdQuadras);
+    };
+</script>
 
 
 
@@ -85,3 +92,4 @@
 
 </body>
 </html>
+

@@ -1105,3 +1105,16 @@
 0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:06 -0300] "GET /html/sair.jsp HTTP/1.1" 302 - http-bio-8080-exec-6 3
 0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:06 -0300] "GET /index.jsp HTTP/1.1" 200 1426 http-bio-8080-exec-6 1
 0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:07 -0300] "GET /index.jsp HTTP/1.1" 200 1426 http-bio-8080-exec-6 1
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:23 -0300] "GET /index.jsp HTTP/1.1" 200 1426 http-bio-8080-exec-1 106
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:30 -0300] "POST /auntenticar HTTP/1.1" 302 - http-bio-8080-exec-2 42
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:30 -0300] "GET /index.jsp HTTP/1.1" 302 - http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:30 -0300] "GET /html/indexLogado.jsp HTTP/1.1" 200 1245 http-bio-8080-exec-4 9
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:34 -0300] "GET /html/sair.jsp HTTP/1.1" 302 - http-bio-8080-exec-5 14
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:34 -0300] "GET /index.jsp HTTP/1.1" 200 1426 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:41 -0300] "POST /auntenticar HTTP/1.1" 302 - http-bio-8080-exec-7 8
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:41 -0300] "GET /html/login.html HTTP/1.1" 304 - http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:48 -0300] "POST /auntenticar HTTP/1.1" 302 - http-bio-8080-exec-9 6
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:48 -0300] "GET /index.jsp HTTP/1.1" 302 - http-bio-8080-exec-10 5
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:48 -0300] "GET /html/indexLogado.jsp HTTP/1.1" 200 1245 http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:50 -0300] "GET /html/sair.jsp HTTP/1.1" 302 - http-bio-8080-exec-10 3
+0:0:0:0:0:0:0:1 - - [13/May/2024:23:42:50 -0300] "GET /index.jsp HTTP/1.1" 200 1426 http-bio-8080-exec-10 1

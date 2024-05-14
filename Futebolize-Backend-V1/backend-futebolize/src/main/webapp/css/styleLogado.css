@@ -252,3 +252,28 @@ form [type="submit"] {
     background-size: 400% auto;
     cursor: pointer;
 }
+
+.text_log{
+    color: white;
+    font-size: 20px;
+    margin-top: 10vh;
+    margin-left: 7vw;
+    flex: auto;
+    flex-wrap: wrap;
+}
+
+.text_log2{
+    color: white;
+    font-size: 24px;
+    margin-top: 10vh;
+    text-align: center;
+    justify-items: center;
+}
+
+.text_log2 p a{
+    text-decoration-line: underline;
+}
+
+.text_log li {
+    margin-top: 10px;
+}

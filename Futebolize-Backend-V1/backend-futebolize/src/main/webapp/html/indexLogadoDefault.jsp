@@ -33,7 +33,6 @@
         </div>
         <ul class="nav-list">
             <li><a href="quadras.jsp">QUADRAS</a></li>
-            <li><a href="sobre.jsp">SOBRE</a></li>
             <li><a href="perfil.jsp">MEU PERFIL</a></li>
             <li><a href="sair.jsp">SAIR</a></li>
         </ul>
@@ -43,8 +42,22 @@
 
 <h1>
     <BR><BR><BR>
-    Ola! Bem vindo a area de usuário Futebolize!
+    Olá! Bem vindo a área de usuário Futebolize!
 </h1>
+
+<div class="text_log">
+    <p>Por aqui você pode acessar os nossos conteúdos disponibilizados para quem quer jogar ou precisa alterar algum dado
+        do perfil , como por exemplo: </p>
+    <li>Quadras cadastradas no sistema;</li>
+    <li>Se cadastrar para jogos;</li>
+    <li>Atualização do seu perfil;</li>
+</div>
+
+<div class="text_log2">
+    <p>Explore o mundo do futebol e participe de partidas com seus amigos da forma que mais gostarem!</p><br>
+    <p>Bora encontrar sua próxima partida?<a href="quadrasLogadoDefault.jsp">Clique aqui!</a></p>
+
+</div>
 <script src="../javascript/script.js"></script>
 </body>
 

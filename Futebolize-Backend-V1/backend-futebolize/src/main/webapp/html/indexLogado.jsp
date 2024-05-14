@@ -33,7 +33,6 @@
         </div>
         <ul class="nav-list">
             <li><a href="quadras.jsp">QUADRAS</a></li>
-            <li><a href="sobre.jsp">SOBRE</a></li>
             <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
             <li><a href="perfil.jsp">MEU PERFIL</a></li>
             <li><a href="sair.jsp">SAIR</a></li>
@@ -44,8 +43,22 @@
 
     <h1>
         <BR><BR><BR>
-        Ola! Bem vindo a area do dono Futebolize!
+        Ola! Bem vindo a área do dono Futebolize!
     </h1>
+
+    <div class="text_log">
+        <p>Por aqui você pode acessar todos os nossos conteúdos disponibilizados, como por exemplo: </p>
+            <li>Quadras cadastradas no sistema;</li>
+            <li>Cadastro de quadras novas;</li>
+            <li>Atualização do seu perfil;</li>
+    </div>
+
+    <div class="text_log2">
+        <p>Explore o mundo do futebol e organize partidas com seus amigos da forma que mais gostarem!</p><br>
+        <p>Deseja cadastrar uma quadra?<a href="cadastrarQuadras.jsp">Clique aqui!</a></p>
+
+    </div>
+
 <script src="../javascript/script.js"></script>
 </body>
 
