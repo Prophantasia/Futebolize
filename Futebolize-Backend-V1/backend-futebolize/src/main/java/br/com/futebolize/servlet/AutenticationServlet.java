@@ -7,7 +7,8 @@ import br.com.futebolize.dao.DatabaseDao;
 import org.apache.commons.codec.digest.DigestUtils;
 
 
-import javax.servlet.ServletException;
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -53,5 +54,32 @@ public class AutenticationServlet extends HttpServlet {
         }
         else
             response.sendRedirect("/html/login.html");
+
+
+       /*if(user.getEmail() != request.getSession().getAttribute("admin")){
+           response.sendRedirect("/html/indexLogadoDefault.jsp");
+       }*/
     }
+
+    /*public enum NivelAcesso{
+        ADMIN, DEFAULT;
+    }
+    @WebFilter("/paginaDono.jsp")
+    public abstract static class ControleAcessoFilter implements Filter {
+        public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+            HttpServletRequest req = (HttpServletRequest) request;
+            HttpServletResponse res = (HttpServletResponse) response;
+
+            User user = (User) req.getSession().getAttribute("usuarioLogado");
+
+            if (user != null && user.getRole() == NivelAcesso.ADMIN) {
+                chain.doFilter(request, response); // Usuário autorizado
+            } else {
+                res.sendRedirect(req.getContextPath() + "/indexLogadoDefault.jsp"); // Redireciona para a página de login
+            }
+        }
+    }*/
 }
+
+
+
