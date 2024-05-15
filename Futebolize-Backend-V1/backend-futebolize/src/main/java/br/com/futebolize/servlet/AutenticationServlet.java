@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 // @Desenvolvido por: Matheus Campos
-@WebServlet("/auntenticar")
+@WebServlet("/autenticar")
 public class AutenticationServlet extends HttpServlet {
 
     @Override

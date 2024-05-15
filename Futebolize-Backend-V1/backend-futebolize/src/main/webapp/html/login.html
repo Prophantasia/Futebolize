@@ -23,14 +23,14 @@
           <img class="logo" src="../assets/images/logo.png" alt="Logo"></a>
       </div>
 
-      <form action="/auntenticar" method="post">
+      <form id="form1">
 
         <p>Usuário:</p>
         <input type="text" name="emailLogin" placeholder="Digite seu usuário" autofocus>
 
         <p>Senha:</p>
         <input type="password" name="passLogin" placeholder="Digite sua senha">
-        <input type="submit"  value="entrar" onclick={confirm()} />
+        <input type="button"  value="entrar" onclick={confirm()} />
       </form>
 
       <p>Ainda não tem uma conta?<a href="cadastrar.html"> Criar conta</a></p>
@@ -50,16 +50,21 @@
     });
   }
 
+  const auth = document.getElementById("form1");
+  const authInf = auth.fetch("/autenticar", {method: "POST"})
+
+
   function confirm(){
     setTimeout(() => {
       Swal.fire({
         title: "Usuário Logado!",
         icon: "success",
-        showConfirmButton: false,
-        showCloseButton: true
-      }).then((result) => {
-      });
-    }, 2000);
+        showConfirmButton: true,
+        showCloseButton: true,
+        confirmButtonText: "avançar",
+        confirmButton: authInf
+      }).then(Swal.getConfirmButton().submit())
+    }, 1000);
   }
 
 

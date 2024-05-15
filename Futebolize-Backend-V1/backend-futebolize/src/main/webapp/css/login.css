@@ -117,7 +117,7 @@ form [type="submit"]:hover {
   text-decoration: none;
 }
 
-form [type="submit"] {
+form [type="button"] {
   background-image: linear-gradient(to right, #56ab2f 0%, #729744 51%, #1b8f98 100%);
   display: block;
   font-size: 20px;
