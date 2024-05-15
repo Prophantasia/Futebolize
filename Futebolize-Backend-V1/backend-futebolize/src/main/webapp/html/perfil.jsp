@@ -122,9 +122,15 @@
                         placeholder="Digite sua nova senha"
                         required
                         minlength="1" />
-                <input type="submit" value="ATUALIZAR"></input>
+
+                <input type="submit" value="ATUALIZAR">
 
             </form>
+
+            <form action="/delete" method="post">
+                <input type="submit" value="EXCLUIR CONTA" id="btn-deletar">
+            </form>
+
         </div>
     </section>
 </main>

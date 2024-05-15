@@ -42,6 +42,32 @@ public class UserDao {
         }
     }
 
+    public void deleteUser(String email, String pass) {
+        String SQl = "DELETE FROM CUSTOMER WHERE EMAIL = ? AND PASSWORD = ?";
+
+        try {
+            // Realiza a conexão com o banco
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQl);
+            System.out.println("success in database connection");
+
+            // Insere na query os valores
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, pass);
+
+            // Executa a query
+            preparedStatement.execute();
+
+
+            System.out.println("success in delete user");
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("fail in database connection");
+        }
+    }
+
     public User buscarUser(User user) {
         String SQl = "SELECT * FROM CUSTOMER WHERE EMAIL = ? AND PASSWORD = ?";
 
