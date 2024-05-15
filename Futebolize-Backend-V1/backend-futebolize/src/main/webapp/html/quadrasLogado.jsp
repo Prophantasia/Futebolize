@@ -31,7 +31,6 @@
         <div class="line3"></div>
     </div>
     <ul class="nav-list">
-        <li><a href="quadras.jsp">QUADRAS</a></li>
         <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
         <li><a href="perfil.jsp">MEU PERFIL</a></li>
         <li><a href="sair.jsp">SAIR</a></li>
@@ -78,7 +77,7 @@
             createDiv(qtdQuadras);
         };
     </script>
-
+    <script src="../javascript/script.js"></script>
 
 
 

@@ -106,7 +106,7 @@
                 name="fieldRentValue"
                 placeholder="Valor por jogador"
                 required />
-        <input type="submit" value="CADASTRAR QUADRA!">
+        <input  type="submit" value="CADASTRAR QUADRA!" onclick={confirm()} />
 
       </form>
     </div>
@@ -114,6 +114,9 @@
 </main>
 
 <script src="../javascript/script.js"></script>
+
+
+
 </body>
 
 </html>

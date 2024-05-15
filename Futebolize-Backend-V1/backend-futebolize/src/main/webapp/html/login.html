@@ -9,6 +9,7 @@
   <title>Futebolize</title>
   <link rel="icon" href="../assets/images/ball.ico">
   <link href="../css/login.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
 
         <p>Senha:</p>
         <input type="password" name="passLogin" placeholder="Digite sua senha">
-        <input type="submit" value="entrar">
+        <input type="submit"  value="entrar" onclick={confirm()} />
       </form>
 
       <p>Ainda não tem uma conta?<a href="cadastrar.html"> Criar conta</a></p>
@@ -37,8 +38,33 @@
     </div>
   </section>
 </main>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 <script src="../javascript/script.js"></script>
+<script>
+
+  function msgError(){
+    Swal.fire({
+      title: "Ops!",
+      text: "Ocorreu um erro",
+      icon: "error"
+    });
+  }
+
+  function confirm(){
+    setTimeout(() => {
+      Swal.fire({
+        title: "Usuário Logado!",
+        icon: "success",
+        showConfirmButton: false,
+        showCloseButton: true
+      }).then((result) => {
+      });
+    }, 2000);
+  }
+
+
+
+</script>
 </body>
 
 </html>

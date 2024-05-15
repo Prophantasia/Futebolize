@@ -85,7 +85,7 @@
         createDiv(qtdQuadras);
     };
 </script>
-
+<script src="../javascript/script.js"></script>
 
 
 

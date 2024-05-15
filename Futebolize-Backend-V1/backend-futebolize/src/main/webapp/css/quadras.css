@@ -32,10 +32,10 @@ a {
 }
 
 .logo {
+    padding-left: 30px;
     width: 110px;
-    margin-left: 5vw;
     height: auto;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 nav {
@@ -88,7 +88,7 @@ nav a img {
 
     .nav-list {
         position: absolute;
-        top: 8vh;
+        top: 0vh;
         right: 0;
         width: 100vw;
         height: 100vh;
@@ -113,6 +113,7 @@ nav a img {
 .nav-list.active {
     transform: translateX(0);
     transition: transform 0.3s ease-in;
+
 }
 
 @keyframes navLinkFade {
