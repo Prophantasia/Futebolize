@@ -44,7 +44,6 @@
         </div>
         <ul class="nav-list">
             <li><a href="quadras.jsp">QUADRAS</a></li>
-            <li><a href="sobre.jsp">SOBRE</a></li>
             <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
             <li><a href="sair.jsp">SAIR</a></li>
         </ul>
@@ -64,7 +63,7 @@
             </div>
 
             <!-- Elemento de conexão com o banco e backend-->
-            <form action="/atualizar" method="post">
+            <form action="/atualizar" method="post" class="update">
 
                 <!-- Elementos do form-->
                 <p>E-mail:</p>
@@ -123,11 +122,11 @@
                         required
                         minlength="1" />
 
-                <input type="submit" value="ATUALIZAR">
+                <input type="submit" class="btn_atualizar" value="ATUALIZAR">
 
             </form>
 
-            <form action="/delete" method="post">
+            <form action="/delete" method="post" class="delete">
                 <input type="submit" value="EXCLUIR CONTA" id="btn-deletar">
             </form>
 

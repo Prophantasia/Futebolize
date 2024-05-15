@@ -180,82 +180,27 @@ p {
     color: #eeeeee;
 }
 
-.quadras_1{
+.quadras{
     padding-top: 100px;
     display: flex;
-    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
-.quadras_1 .quadra_1 img{
-   width: 350px;
-    height: 350px;
-    padding-left: 200px;
-    border-radius: 8px;
-
-}
-
-.quadras_1 .quadra_1 p{
-    padding-left: 250px;
-}
-
-.quadras_1 .quadra_2 img{
-    width: 350px;
-    height: 350px;
-    padding-left: 200px;
-    border-radius: 8px;
-}
-
-.quadras_1 .quadra_2 p{
-    padding-left: 250px;
-}
-
-.quadras_1 .quadra_3 img{
-    width: 350px;
-    height: 350px;
-    padding-left: 200px;
-    border-radius: 8px;
-}
-
-.quadras_1 .quadra_3 p{
-    padding-left: 250px;
-}
-
-.quadras_2{
-    padding-top: 50px;
+.quadras #quadras_1{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.quadras_2 .quadra_1 img{
+.quadras img{
     width: 350px;
     height: 350px;
-    padding-left: 200px;
     border-radius: 8px;
+    margin: 3px;
 }
 
-.quadras_2 .quadra_1 p{
-    padding-left: 250px;
-}
-.quadras_2 .quadra_2 img{
-    width: 350px;
-    height: 350px;
-    padding-left: 200px;
-    border-radius: 8px;
-}
 
-.quadras_2 .quadra_2 p{
-    padding-left: 250px;
-}
 
-.quadras_2 .quadra_3 img{
-    width: 350px;
-    height: 350px;
-    padding-left: 200px;
-    border-radius: 8px;
-}
-
-.quadras_2 .quadra_3 p{
-    padding-left: 250px;
-}
 
 
