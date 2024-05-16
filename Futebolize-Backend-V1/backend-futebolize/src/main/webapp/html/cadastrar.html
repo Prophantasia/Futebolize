@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,6 +9,7 @@
   <title>Futebolize</title>
   <link rel="icon" href="../assets/images/ball.ico">
   <link href="../css/cadastro.css" rel="stylesheet" type="text/css" />
+  <link href="../css/ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       </div>
 
       <!-- Elemento de conexão com o banco e backend-->
-      <form action="/cadastrar" method="post">
+      <form action="/cadastrar" method="post" onsubmit="return criarUser(this)">
 
         <!-- Elementos do form-->
         <p>E-mail:</p>
@@ -83,6 +84,21 @@
 </main>
 
 <script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+<script>
+  function criarUser(form){
+    Swal.fire({
+      title: "Sucesso!",
+      text: "Usuário cadastrado no sistema!",
+      icon: "success"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        form.submit();
+      }
+    });
+    return false;
+  }
+</script>
 </body>
 
 </html>

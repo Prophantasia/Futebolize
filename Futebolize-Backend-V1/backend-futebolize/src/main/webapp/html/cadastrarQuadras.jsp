@@ -52,7 +52,7 @@
       </div>
 
       <!-- Elemento de conexão com o banco e backend-->
-      <form action="/cadastrarQuadra" method="post" enctype="multipart/form-data" > <!---->
+      <form action="/cadastrarQuadra" method="post" enctype="multipart/form-data" onsubmit="return criarQuadra(this)">
 
         <!-- Elementos do form-->
         <p>Nome da Quadra:</p>
@@ -62,14 +62,6 @@
                 placeholder="Digite o nome da quadra" autofocus
                 required
                 minlength="1" />
-
-        <!--<p>Caminho para a imagem da quadra:</p>
-        <input
-                type="text"
-                name="fieldImagePath"
-                placeholder="informe o diretorio da imagem"
-                required
-                minlength="1" />-->
 
         <p>Imagem:</p>
         <input
@@ -114,6 +106,23 @@
 </main>
 
 <script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+
+<script>
+  function criarQuadra(form){
+    Swal.fire({
+      title: "Sucesso!",
+      text: "Quadra cadastrada com sucesso!",
+      icon: "success"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        form.submit();
+      }
+    });
+    return false;
+  }
+
+</script>
 </body>
 
 </html>

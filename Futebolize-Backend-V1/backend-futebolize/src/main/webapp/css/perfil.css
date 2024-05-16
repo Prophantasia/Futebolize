@@ -123,7 +123,6 @@ input::placeholder {
     display: block;
 }
 
-/*Arrumar aqui Rafael*/
 input #btn-deletar {
     background-image: linear-gradient(to right, #8a0884 0%, #ff0000 51%, #a81a1a 100%);
     margin: 10px;
@@ -156,7 +155,7 @@ form [type="submit"]:hover {
     cursor: pointer;
 }
 .delete [type="submit"]  {
-    background-image: linear-gradient(to right, #56ab2f 0px, #729744 51%, #ff0000 100%);
+    background-image: linear-gradient(to right, #fb3545 0px, #fb2131 51%, #ff0000 100%);
     display: block;
     font-size: 20px;
     font-family: 'GhotamBold';

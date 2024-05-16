@@ -1,4 +1,3 @@
-<%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -10,20 +9,28 @@
 <script>
 
     function confirm(){
+
         setTimeout(() => {
             Swal.fire({
-                title: "Usuário Logado!",
+                position: "top-end",
                 icon: "success",
+                title: "Usuário autenticado!",
+                toast: true,
                 showConfirmButton: false,
-                showCloseButton: true
-            })
+                timer: 3500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
         }, 1000);
     }
 
     <%
     if(request.getSession().getAttribute("usuarioLogado") != null){
-       if(request.getSession().getAttribute("usuarioLogadoOK") == null){
-           request.getSession().setAttribute("usuarioLogadoOK", true);
+       if(request.getSession().getAttribute("logadoFlag") == null){
+           request.getSession().setAttribute("logadoFlag", true);
            String cmd = "confirm();";
            out.print(cmd);
        }
@@ -43,7 +50,7 @@
     <title>Futebolize</title>
     <link rel="icon" href="../assets/images/ball.ico">
     <link href="../css/styleLogado.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="../css/ui.css" rel="stylesheet">
 </head>
 
 <body>

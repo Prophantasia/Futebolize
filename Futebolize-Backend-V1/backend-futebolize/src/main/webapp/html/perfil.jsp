@@ -29,6 +29,7 @@
     <title>Futebolize</title>
     <link rel="icon" href="../assets/images/ball.ico">
     <link href="../css/perfil.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -63,7 +64,7 @@
             </div>
 
             <!-- Elemento de conexão com o banco e backend-->
-            <form action="/atualizar" method="post" class="update">
+            <form action="/atualizar" method="post" class="update" onsubmit="return atualizar(this);">
 
                 <!-- Elementos do form-->
                 <p>E-mail:</p>
@@ -126,7 +127,7 @@
 
             </form>
 
-            <form action="/delete" method="post" class="delete">
+            <form action="/delete" method="post" class="delete" onsubmit="return deletar(this);">
                 <input type="submit" value="EXCLUIR CONTA" id="btn-deletar">
             </form>
 
@@ -135,6 +136,55 @@
 </main>
 
 <script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    function atualizar(form){
+        Swal.fire({
+            title: "Você tem certeza?",
+            text: "Você será redirecionado para a página de login!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#19882f",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sim, vou atualizar!",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+                form.submit();
+            }
+        });
+        return false;
+    }
+
+    function deletar(form){
+        Swal.fire({
+            title: "Você tem certeza?",
+            text: "Não será possível voltar atrás!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3382dd",
+            confirmButtonText: "Sim, vou deletar!",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+                form.submit();
+            }
+        });
+        return false;
+    }
+</script>
 </body>
 
 </html>

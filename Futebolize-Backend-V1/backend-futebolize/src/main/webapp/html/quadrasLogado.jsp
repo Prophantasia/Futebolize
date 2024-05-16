@@ -33,6 +33,7 @@
         <div class="line3"></div>
     </div>
     <ul class="nav-list">
+        <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
         <li><a href="perfil.jsp">MEU PERFIL</a></li>
         <li><a href="sair.jsp">SAIR</a></li>
     </ul>
