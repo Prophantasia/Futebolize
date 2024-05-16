@@ -5,10 +5,6 @@
     // Verifica se o atributo na sessão é null
     if(request.getSession().getAttribute("usuarioLogado") == null){
         response.sendRedirect("../index.jsp");
-    } else {
-        if(request.getSession().getAttribute("role") == "admin"){
-            response.sendRedirect("indexLogado.jsp");
-        }
     }
 %>
 

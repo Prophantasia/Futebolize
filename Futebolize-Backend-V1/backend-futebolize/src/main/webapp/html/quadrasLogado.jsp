@@ -3,13 +3,26 @@
 <%@page import="br.com.futebolize.dao.SearchFieldDao"%>
 <%@ page import="br.com.futebolize.model.Field" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="br.com.futebolize.dao.UserDao" %>
+
 
 <%// @Desenvolvido por: Matheus Campos e Gabriel Henrique %>
 
 <%
+    UserDao userDao = new UserDao();
+    User userServer = new User();
+    userServer.setEmail(request.getSession().getAttribute("email").toString());
+    userServer.setPassword(request.getSession().getAttribute("pass").toString());
+    User user = userDao.buscarUser(userServer);
+
     // Verifica se o atributo na sessão é null
-    if(request.getSession().getAttribute("usuarioLogado") == null)
+    if(request.getSession().getAttribute("usuarioLogado") == null){
         response.sendRedirect("quadras.jsp");
+    }else {
+        if (user.getRole().equals("default")) {
+            response.sendRedirect("quadrasLogadoDefault.jsp");
+        }
+    }
 %>
 
 <html>
