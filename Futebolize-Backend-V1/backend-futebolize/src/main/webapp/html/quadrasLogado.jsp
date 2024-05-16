@@ -1,8 +1,10 @@
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="br.com.futebolize.dao.SearchFieldDao"%>
+<%@ page import="br.com.futebolize.model.Field" %>
+<%@ page import="java.util.ArrayList" %>
 
-<%// @Desenvolvido por: Matheus Campos %>
+<%// @Desenvolvido por: Matheus Campos e Gabriel Henrique %>
 
 <%
     // Verifica se o atributo na sessão é null
@@ -15,7 +17,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/quadrasLogado.css">
+    <link rel="stylesheet" href="../css/quadrasLogadoDefault.css">
     <link rel="icon" href="../assets/images/ball.ico">
     <title>Quadras</title>
 </head>
@@ -31,57 +33,59 @@
         <div class="line3"></div>
     </div>
     <ul class="nav-list">
-        <li><a href="quadras.jsp">QUADRAS</a></li>
-        <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
         <li><a href="perfil.jsp">MEU PERFIL</a></li>
         <li><a href="sair.jsp">SAIR</a></li>
     </ul>
 </nav>
 
-    <div id="divContainer">
+<div id="divContainer">
 
-    </div>
+</div>
 
+<script>
+    window.onload = function() {
+        var divContainer = document.getElementById("divContainer");
 
-    <script>
-    <%
-        int qtdQuadrasJava = SearchFieldDao.showFields();
-    %>
-        window.onload = function() {
-            var qtdQuadras = <%= qtdQuadrasJava %>
+        function createDiv(qtdQuadrasJava) {
+            for (let i = 0; i < qtdQuadrasJava; i++) {
+                var div = document.createElement("div");
+                div.className = "quadra";
 
+                var img = document.createElement("img");
+                img.src = "../img/"+quadrasData[i].imagePath;
+                img.alt = "Imagem";
+                div.appendChild(img);
 
-            function createDiv(qtdQuadras) {
-                var divContainer = document.getElementById("divContainer");
+                var p1 = document.createElement("p");
+                p1.textContent = quadrasData[i].name;
+                div.appendChild(p1);
 
-                for (var i = 0; i < qtdQuadras; i++) {
-                    var div = document.createElement("div");
-                    div.className = "quadra";
+                var p2 = document.createElement("p");
+                p2.textContent = quadrasData[i].address;
+                div.appendChild(p2);
 
-                    var img = document.createElement("img");
-                    img.src = "../img/1715605541190-jdSuzana.jpeg";
-                    img.alt = "Imagem";
-                    div.appendChild(img);
-
-                    var p1 = document.createElement("p");
-                    p1.textContent = "Texto do parágrafo 1";
-                    div.appendChild(p1);
-
-                    var p2 = document.createElement("p");
-                    p2.textContent = "Texto do parágrafo 2";
-                    div.appendChild(p2);
-
-                    divContainer.appendChild(div);
-                }
+                divContainer.appendChild(div);
             }
+        }
 
-            createDiv(qtdQuadras);
-        };
-    </script>
+        // Dados do banco de dados
+        var quadrasData = [];
+        <%
+            SearchFieldDao fieldDao = new SearchFieldDao();
+            ArrayList<Field> fields = fieldDao.listarFields();
+            for (Field field : fields) {
+        %>
+        quadrasData.push({
+            name: "<%= field.getName() %>",
+            address: "<%= field.getAddress() %>",
+            imagePath: "<%= field.getImage_path() %>"
+        });
+        <% } %>
 
-
-
-
+        createDiv(quadrasData.length);
+    };
+</script>
 
 </body>
 </html>
+

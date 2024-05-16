@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: rafae
-  Date: 14/05/2024
-  Time: 16:40
-  To change this template use File | Settings | File Templates.
---%>
-
-
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="br.com.futebolize.dao.SearchFieldDao"%>
+<%@ page import="br.com.futebolize.model.Field" %>
+<%@ page import="java.util.ArrayList" %>
 
-<%// @Desenvolvido por: Rafael Soares %>
+<%// @Desenvolvido por: Matheus Campos e Gabriel Henrique %>
 
 <%
     // Verifica se o atributo na sessão é null
@@ -49,46 +42,41 @@
 
 </div>
 
-
 <script>
-    <%
-        int qtdQuadrasJava = SearchFieldDao.showFields();
-    %>
     window.onload = function() {
-        var qtdQuadras = <%= qtdQuadrasJava %>
+        var divContainer = document.getElementById("divContainer");
 
+        <%
+            int qtdQuadrasJava = SearchFieldDao.showFields();
+            SearchFieldDao fieldDao = new SearchFieldDao();
+            ArrayList<Field> fields = fieldDao.listarFields();
 
-            function createDiv(qtdQuadras) {
-                var divContainer = document.getElementById("divContainer");
+            for (Field field : fields) {
+                // Gere os elementos HTML para cada campo (field)
+        %>
+        var div = document.createElement("div");
+        div.className = "quadra";
 
-                for (var i = 0; i < qtdQuadras; i++) {
-                    var div = document.createElement("div");
-                    div.className = "quadra";
+        var img = document.createElement("img");
+        img.src = "../img/1715605541190-jdSuzana.jpeg";
+        img.alt = "Imagem";
+        div.appendChild(img);
 
-                    var img = document.createElement("img");
-                    img.src = "../img/1715605541190-jdSuzana.jpeg";
-                    img.alt = "Imagem";
-                    div.appendChild(img);
+        var p1 = document.createElement("p");
+        p1.textContent = <%= field.getName()%>;
+        div.appendChild(p1);
 
-                    var p1 = document.createElement("p");
-                    p1.textContent = "Texto do parágrafo 1";
-                    div.appendChild(p1);
+        var p2 = document.createElement("p");
+        p2.textContent = <%= field.getAddress()%>;
+        div.appendChild(p2);
 
-                    var p2 = document.createElement("p");
-                    p2.textContent = "Texto do parágrafo 2";
-                    div.appendChild(p2);
+        divContainer.appendChild(div);
 
-                    divContainer.appendChild(div);
-                }
+        <%
             }
-
-        createDiv(qtdQuadras);
+        %>
     };
 </script>
-
-
-
-
 
 </body>
 </html>

@@ -1,4 +1,7 @@
 <%@ page import="br.com.futebolize.model.User" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="br.com.futebolize.model.Field" %>
+<%@ page import="br.com.futebolize.dao.SearchFieldDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%// @Desenvolvido por: Matheus Campos %>
