@@ -7,6 +7,31 @@
         response.sendRedirect("../index.jsp");
 %>
 
+<script>
+
+    function confirm(){
+        setTimeout(() => {
+            Swal.fire({
+                title: "Usuário Logado!",
+                icon: "success",
+                showConfirmButton: false,
+                showCloseButton: true
+            })
+        }, 1000);
+    }
+
+    <%
+    if(request.getSession().getAttribute("usuarioLogado") != null){
+       if(request.getSession().getAttribute("usuarioLogadoOK") == null){
+           request.getSession().setAttribute("usuarioLogadoOK", true);
+           String cmd = "confirm();";
+           out.print(cmd);
+       }
+    }
+%>
+
+</script>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,6 +43,7 @@
     <title>Futebolize</title>
     <link rel="icon" href="../assets/images/ball.ico">
     <link href="../css/styleLogado.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,6 +86,7 @@
     </div>
 
 <script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
