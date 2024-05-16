@@ -181,6 +181,8 @@ footer {
 
 .catch-phrase-main p {
   font-size: 25px;
+  display: flex;
+  flex-direction: row;
   font-family: 'GhotamBold';
   font-weight: normal;
   height: 30px;

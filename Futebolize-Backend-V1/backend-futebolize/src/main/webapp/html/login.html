@@ -9,6 +9,7 @@
   <title>Futebolize</title>
   <link rel="icon" href="../assets/images/ball.ico">
   <link href="../css/login.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,6 +40,28 @@
 </main>
 
 <script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+
+<script>
+  function msgError(){
+    Swal.fire({
+      title: "Ops!",
+      text: "Ocorreu um erro",
+      icon: "error"
+    });
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const valor = urlParams.get('Login');
+
+  if(valor === "ERROR"){
+    msgError();
+    //window.alert("eee");
+  }
+  console.log(valor);
+
+</script>
 </body>
 
 </html>

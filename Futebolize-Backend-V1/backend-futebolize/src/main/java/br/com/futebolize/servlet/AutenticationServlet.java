@@ -50,11 +50,12 @@ public class AutenticationServlet extends HttpServlet {
             request.getSession().setAttribute("email", user.getEmail());
             request.getSession().setAttribute("pass", user.getPassword());
             request.getSession().setAttribute("usuarioLogado", true);
+            request.getSession().setAttribute("usuarioLogadoOK", null);
             response.sendRedirect("/index.jsp");
         }
-        else
-            response.sendRedirect("/html/login.html");
-
+        else {
+            response.sendRedirect("/html/login.html?Login=ERROR");
+        }
 
        /*if(user.getEmail() != request.getSession().getAttribute("admin")){
            response.sendRedirect("/html/indexLogadoDefault.jsp");
