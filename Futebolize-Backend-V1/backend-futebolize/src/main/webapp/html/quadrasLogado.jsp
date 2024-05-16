@@ -1,6 +1,9 @@
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="br.com.futebolize.dao.SearchFieldDao"%>
+<%@ page import="br.com.futebolize.model.Field" %>
+<%@ page import="br.com.futebolize.dao.StoreFieldsDao" %>
+<%@ page import="java.util.ArrayList" %>
 
 <%// @Desenvolvido por: Matheus Campos %>
 
@@ -45,25 +48,36 @@
     <script>
     <%
         int qtdQuadrasJava = SearchFieldDao.showFields();
+
     %>
+
+            <%
+                    //Field[][] fieldList = StoreFieldsDao.storeFields();
+
+                    //Field field = new Field();
+                    ArrayList<Field> fields = StoreFieldsDao.storeFields();
+            %>
         window.onload = function() {
-            var qtdQuadras = <%= qtdQuadrasJava %>
 
 
+            var qtdQuadras = <%= qtdQuadrasJava %> //era qtdQuadrasJava
+            var fields = <%= new org.json.JSONArray(fields) %>;
             function createDiv(qtdQuadras) {
                 var divContainer = document.getElementById("divContainer");
 
                 for (var i = 0; i < qtdQuadras; i++) {
+                    var field = fields[i];
+
                     var div = document.createElement("div");
                     div.className = "quadra";
 
                     var img = document.createElement("img");
-                    img.src = "../img/1715605541190-jdSuzana.jpeg";
+                    img.src = "../img/";
                     img.alt = "Imagem";
                     div.appendChild(img);
 
                     var p1 = document.createElement("p");
-                    p1.textContent = "Texto do parágrafo 1";
+                    p1.textContent = field.Name;
                     div.appendChild(p1);
 
                     var p2 = document.createElement("p");
@@ -79,7 +93,7 @@
     </script>
     <script src="../javascript/script.js"></script>
 
-
+<img src="<%= fields.get(0).getImage_path()%>">
 
 
 </body>

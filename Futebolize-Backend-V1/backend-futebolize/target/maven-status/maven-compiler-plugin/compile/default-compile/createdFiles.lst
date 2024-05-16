@@ -1,4 +1,9 @@
 br\com\futebolize\dao\AutenticarDao.class
+br\com\futebolize\dao\StoreFieldsDao.class
+br\com\futebolize\servlet\AutenticationServlet.class
+br\com\futebolize\dao\DatabaseDao.class
+br\com\futebolize\dao\UserDao.class
+br\com\futebolize\model\Field.class
 br\com\futebolize\servlet\AutenticationServlet.class
 br\com\futebolize\dao\DatabaseDao.class
 br\com\futebolize\dao\UserDao.class

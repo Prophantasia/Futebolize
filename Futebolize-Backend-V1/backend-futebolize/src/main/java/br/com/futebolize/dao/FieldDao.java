@@ -1,12 +1,15 @@
 package br.com.futebolize.dao;
 
 import br.com.futebolize.model.Field;
+import br.com.futebolize.dao.StoreFieldsDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class FieldDao {
+
+    StoreFieldsDao storeFieldsDao = new StoreFieldsDao();
 
     public void createField (Field field) {
         String SQl = "INSERT INTO FIELDS (NAME, IMAGE_PATH, ADDRESS, STATE,  MAX_PLAYERS, RENT_VALUE) VALUES ( ?, ?, ?, ?, ?, ?)";
@@ -30,6 +33,7 @@ public class FieldDao {
 
 
             System.out.println("success in insert field");
+            storeFieldsDao.storeFields();
             connection.close();
 
         } catch (Exception e) {

@@ -1,5 +1,8 @@
 package br.com.futebolize.dao;
 
+import br.com.futebolize.model.Field;
+
+import java.util.*;
 import java.sql.*;
 
 public class SearchFieldDao {
@@ -34,5 +37,4 @@ public class SearchFieldDao {
             return 0;
         }
     }
-
 }

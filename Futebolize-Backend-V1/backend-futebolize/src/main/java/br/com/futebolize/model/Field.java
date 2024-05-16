@@ -8,6 +8,21 @@ public class Field {
     private String image_path;
     private String address;
     private String state;
+    private String rent_value;
+
+
+    private int score;
+    private int max_players;
+    private int id;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getRent_value() {
         return rent_value;
@@ -17,10 +32,6 @@ public class Field {
         this.rent_value = rent_value;
     }
 
-    private String rent_value;
-
-    private int score;
-    private int max_players;
 
     public String getName() {
         return name;
