@@ -91,6 +91,7 @@ public class UserDao {
             user.setPhone(resultSet.getString("PHONE_NUMBER"));
             user.setEmail(resultSet.getString("EMAIL"));
             user.setPassword(resultSet.getString("PASSWORD"));
+            user.setRole(resultSet.getString("NIVEL"));
             System.out.println("success in search user");
 
             connection.close();

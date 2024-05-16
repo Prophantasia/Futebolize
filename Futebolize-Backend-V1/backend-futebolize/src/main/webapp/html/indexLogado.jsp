@@ -1,10 +1,29 @@
+<%@ page import="br.com.futebolize.servlet.AutenticationServlet" %>
+<%@ page import="java.util.Objects" %>
+<%@ page import="br.com.futebolize.dao.UserDao" %>
+<%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
     // Verifica se o atributo na sessão é null
-    if(request.getSession().getAttribute("usuarioLogado") == null)
+
+
+    UserDao userDao = new UserDao();
+    User userServer = new User();
+    userServer.setEmail(request.getSession().getAttribute("email").toString());
+    userServer.setPassword(request.getSession().getAttribute("pass").toString());
+    User user = userDao.buscarUser(userServer);
+
+    if(request.getSession().getAttribute("usuarioLogado") == null){
         response.sendRedirect("../index.jsp");
+    } else {
+        if(user.getRole().equals("default")){
+            response.sendRedirect("indexLogadoDefault.jsp");
+        }
+    }
+
 %>
+
 
 <script>
 

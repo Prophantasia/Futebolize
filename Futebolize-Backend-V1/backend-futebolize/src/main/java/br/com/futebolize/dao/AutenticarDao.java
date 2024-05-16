@@ -27,7 +27,7 @@ public class AutenticarDao {
 
             // Caso encontre registro na consulta
             if (resultSet.next()) {
-                System.out.println("Usuário: "+resultSet.getString("NAME")+" autenticado com sucesso!");
+                System.out.println("Usuário: "+resultSet.getString("NAME")+ " autenticado com sucesso!");
                 connection.close();
                 return true;
 

@@ -46,11 +46,14 @@ public class AutenticationServlet extends HttpServlet {
             request.getSession().removeAttribute("pass");
             request.getSession().removeAttribute("usuarioLogado");
 
+
             // Adicionar atributos para a sessão
             request.getSession().setAttribute("email", user.getEmail());
             request.getSession().setAttribute("pass", user.getPassword());
             request.getSession().setAttribute("usuarioLogado", true);
             request.getSession().setAttribute("usuarioLogadoOK", null);
+
+
             response.sendRedirect("/index.jsp");
         }
         else {
