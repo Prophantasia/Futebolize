@@ -142,6 +142,8 @@ nav a img {
 
 .containerSobre{
   text-align: center;
+  display: flex;
+  flex-flow: column;
 }
 
 .titulo h3{
@@ -150,25 +152,34 @@ nav a img {
   margin-top: 5vw;
   color: darkgreen;
   text-align: left;
+  display: flex;
+  flex-flow: column;
 }
 
 .titulo h3 strong{
   margin-right: 5vw;
   padding-left: 1px;
-  margin-top: 5vw;
   color:green;
   text-align: left;
+  display: flex;
+  flex-flow: column;
 }
 .sub1{
   color: green;
+  display: flex;
+  flex-flow: column;
 
 }
 .sub2{
   color: green;
+  display: flex;
+  flex-flow: column;
 
 }
 .sub3{
   color: green;
+  display: flex;
+  flex-flow: column;
 
 }
 
@@ -177,6 +188,8 @@ nav a img {
   padding-left: 50px;
   color: white;
   text-align: left;
+  display: flex;
+  flex-flow: column;
 }
 
 .img-sobre{
@@ -184,7 +197,9 @@ nav a img {
   max-width: 900px;
   max-height: 900px;
   position: relative;
-  bottom: 60vh;
+  bottom: 55vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .buttonSobre button{
@@ -194,6 +209,11 @@ nav a img {
   border-radius: 9px;
   width: 250px;
   height: 50px;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40vw;
 }
 
 footer {
@@ -202,4 +222,6 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 50px;
+  display: flex;
+  flex-flow: column;
 }

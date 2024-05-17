@@ -36,6 +36,8 @@ a {
     margin-left: 5vw;
     height: auto;
     padding-top: 20px;
+    display: flex;
+    flex-flow: wrap;
 }
 
 nav {
@@ -139,16 +141,6 @@ nav a img {
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
-.catch-phrase-main h1 {
-    color: white;
-    text-align: center;
-    padding-top: 100px;
-    margin-left: 5vw;
-}
-
-.catch-phrase-main h2 {
-    margin-top: 6vh;
-}
 
 main {
     align-items: center;
@@ -171,13 +163,20 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    align-content: center;
+    justify-content: center;
     margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
 }
 
 p {
     font-family: 'GhotamNormal';
     font-weight: normal;
     color: #eeeeee;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #divContainer{
@@ -194,8 +193,29 @@ p {
     height: 320px;
     border-radius: 8px;
     margin: 3px;
-    background-color: #cccccc;
+    display: flex;
+    flex-wrap: wrap;
+    border-width: 3px;
+    border-style: solid;
+    border-color: beige;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
 
+}
+
+label{ cursor: pointer;}
+#coracao { display: none;}
+#coracao:checked+label>svg {
+    animation: preencher;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes preencher {
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: #19b425;
+    }
 }
 
 

@@ -1,3 +1,6 @@
+<%@ page import="br.com.futebolize.servlet.AutenticationServlet" %>
+<%@ page import="java.util.Objects" %>
+<%@ page import="br.com.futebolize.dao.UserDao" %>
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -8,6 +11,39 @@
     }
 %>
 
+
+<script>
+
+    function confirm(){
+
+        setTimeout(() => {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Usuário autenticado!",
+                toast: true,
+                showConfirmButton: false,
+                timer: 3500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+        }, 1000);
+    }
+
+    <%
+    if(request.getSession().getAttribute("usuarioLogado") != null){
+       if(request.getSession().getAttribute("usuarioLogadoOK") == null){
+           request.getSession().setAttribute("usuarioLogadoOK", true);
+           String cmd = "confirm();";
+           out.print(cmd);
+       }
+    }
+%>
+
+</script>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,6 +55,7 @@
     <title>Futebolize</title>
     <link rel="icon" href="../assets/images/ball.ico">
     <link href="../css/styleLogadoDefault.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -59,7 +96,13 @@
     <p>Bora encontrar sua próxima partida?<a href="quadrasLogadoDefault.jsp">Clique aqui!</a></p>
 
 </div>
+
+<footer>
+    <p>&copy; 2024 - Todos os direitos reservados</p>
+    <p>Entre em contato pelo e-mail: futebolize@contato.com</p>
+</footer>
 <script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

@@ -111,6 +111,10 @@
 
     </div>
 
+<footer>
+    <p>&copy; 2024 - Todos os direitos reservados</p>
+    <p>Entre em contato pelo e-mail: futebolize@contato.com</p>
+</footer>
 <script src="../javascript/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
 </body>

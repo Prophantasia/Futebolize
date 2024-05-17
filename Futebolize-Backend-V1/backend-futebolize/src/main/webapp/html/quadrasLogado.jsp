@@ -100,6 +100,11 @@
     };
 </script>
 
+<footer>
+    <p>&copy; 2024 - Todos os direitos reservados</p>
+    <p>Entre em contato pelo e-mail: futebolize@contato.com</p>
+</footer>
+
 </body>
 </html>
 

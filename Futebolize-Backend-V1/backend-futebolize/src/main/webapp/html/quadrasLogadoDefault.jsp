@@ -44,6 +44,13 @@
 
 </div>
 
+<!--Funcionalidade de checkbox para implementar-->
+<!--<input type="checkbox" id="coracao" />
+<label for="coracao">
+    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#19b425">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    </svg>
+</label>-->
 <script>
     window.onload = function() {
         var divContainer = document.getElementById("divContainer");
@@ -66,6 +73,7 @@
                 p2.textContent = quadrasData[i].address;
                 div.appendChild(p2);
 
+
                 divContainer.appendChild(div);
             }
         }
@@ -86,8 +94,13 @@
 
         createDiv(quadrasData.length);
     };
+
 </script>
 
+<footer>
+    <p>&copy; 2024 - Todos os direitos reservados</p>
+    <p>Entre em contato pelo e-mail: futebolize@contato.com</p>
+</footer>
 </body>
 </html>
 

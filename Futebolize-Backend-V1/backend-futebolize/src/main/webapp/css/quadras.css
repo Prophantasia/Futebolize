@@ -153,6 +153,8 @@ nav a img {
 main {
     align-items: center;
     margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h2#link-quadra a {
@@ -172,6 +174,8 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: 50px;
+    display: flex;
+    flex-flow: column;
 }
 
 p {
@@ -194,10 +198,16 @@ p {
 }
 
 .quadras img{
+    display: flex;
+    flex-wrap: wrap;
     width: 320px;
     height: 320px;
     border-radius: 8px;
     margin: 3px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: beige;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
 }
 
 

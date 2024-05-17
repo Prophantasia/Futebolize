@@ -1,9 +1,18 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: rafae
+  Date: 17/05/2024
+  Time: 01:04
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page import="br.com.futebolize.dao.UserDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-
+    // Verifica se o atributo na sessão é null
+    if(request.getSession().getAttribute("usuarioLogado") == null)
+        response.sendRedirect("../index.jsp");
     UserDao userDao = new UserDao();
     User user = new User();
 
@@ -14,13 +23,7 @@
     // Metódo para buscar o registro do usuário via email e senha
     User resp = userDao.buscarUser(user);
 
-    if(request.getSession().getAttribute("usuarioLogado") == null){
-        response.sendRedirect("../index.jsp");
-    } else {
-        if(user.getRole().equals("default")){
-            response.sendRedirect("perfilLogado.jsp");
-        }
-    }
+
 %>
 
 <!DOCTYPE html>
@@ -33,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Futebolize</title>
     <link rel="icon" href="../assets/images/ball.ico">
-    <link href="../css/perfil.css" rel="stylesheet" type="text/css" />
+    <link href="../css/perfilLogado.css" rel="stylesheet" type="text/css" />
     <link href="../css/ui.css" rel="stylesheet">
 </head>
 
@@ -50,7 +53,6 @@
         </div>
         <ul class="nav-list">
             <li><a href="quadras.jsp">QUADRAS</a></li>
-            <li><a href="cadastrarQuadras.jsp">CADASTRAR QUADRA</a></li>
             <li><a href="sair.jsp">SAIR</a></li>
         </ul>
     </nav>

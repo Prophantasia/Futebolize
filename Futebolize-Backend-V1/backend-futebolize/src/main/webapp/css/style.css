@@ -21,7 +21,8 @@
 body {
   background-size: contain;
   font-family: 'GhotamNormal';
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%, #6e7881 50%);
+
 }
 
 nav a {
@@ -30,6 +31,8 @@ nav a {
   transition: 0.3s;
   font-family: 'GhotamBold';
   font-weight: normal;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -37,6 +40,8 @@ nav a {
   width: 110px;
   height: auto;
   padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav {
@@ -145,12 +150,21 @@ main {
   margin-top: 150px;
 }
 
+.img-main{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10px;
+}
 .ney {
-  margin-left: 60vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
   max-width: 900px;
   max-height: 900px;
   position: relative;
-  bottom: 24vh;
+  margin-left: 50vw;
+
 }
 
 h2#link-quadra a {
@@ -169,6 +183,8 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 50px;
+  display: flex;
+  flex-flow: column;
 }
 
 .catch-phrase-main {

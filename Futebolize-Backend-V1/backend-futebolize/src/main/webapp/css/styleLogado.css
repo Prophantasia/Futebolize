@@ -9,6 +9,8 @@
     width: 110px;
     height: auto;
     padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -29,7 +31,7 @@
 body {
     background-size: contain;
     font-family: 'GhotamNormal';
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%, #6e7881 50%);
 }
 
 a {
@@ -182,9 +184,12 @@ nav a img {
 }
 
 h1 {
-    justify-items: center;
+    align-content: center;
+    justify-content: center;
     text-align: center;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .login p {
@@ -192,6 +197,8 @@ h1 {
     background-color: #1f1e1e;
     font-family: 'GhotamBold';
     color: #fefefe;
+    display: flex;
+    flex-flow: column;
 }
 
 .login a {
@@ -258,8 +265,15 @@ form [type="submit"] {
     font-size: 20px;
     margin-top: 10vh;
     margin-left: 7vw;
+    display: flex;
     flex: auto;
     flex-wrap: wrap;
+    flex-flow: column;
+}
+
+.text_log p{
+    margin-right: 10px;
+
 }
 
 .text_log2{
@@ -268,12 +282,34 @@ form [type="submit"] {
     margin-top: 10vh;
     text-align: center;
     justify-items: center;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
 }
 
 .text_log2 p a{
     text-decoration-line: underline;
+    display: flex;
+    flex-flow: column;
 }
+
+.text_log2 p a:hover{
+
+    color: yellow;
+}
+
 
 .text_log li {
     margin-top: 10px;
+    display: flex;
+}
+
+footer {
+    background-color: #1f1e1e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
 }
