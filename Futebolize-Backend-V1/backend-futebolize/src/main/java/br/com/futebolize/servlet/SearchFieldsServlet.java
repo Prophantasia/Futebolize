@@ -1,9 +1,6 @@
 package br.com.futebolize.servlet;
 
-import br.com.futebolize.dao.AutenticarDao;
-import br.com.futebolize.model.User;
-import br.com.futebolize.dao.DatabaseDao;
-import br.com.futebolize.dao.SearchFieldDao;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

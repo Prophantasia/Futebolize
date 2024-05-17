@@ -1,14 +1,12 @@
 package br.com.futebolize.servlet;
 
 import br.com.futebolize.dao.AutenticarDao;
-import br.com.futebolize.dao.UserDao;
 import br.com.futebolize.model.User;
 import br.com.futebolize.dao.DatabaseDao;
 import org.apache.commons.codec.digest.DigestUtils;
 
 
-import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +19,7 @@ import java.io.IOException;
 public class AutenticationServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
 
         // Cria o banco de dados caso não exista
         DatabaseDao databaseDao = new DatabaseDao();

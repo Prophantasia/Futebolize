@@ -1,5 +1,4 @@
-<%@ page import="br.com.futebolize.servlet.AutenticationServlet" %>
-<%@ page import="java.util.Objects" %>
+
 <%@ page import="br.com.futebolize.dao.UserDao" %>
 <%@ page import="br.com.futebolize.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

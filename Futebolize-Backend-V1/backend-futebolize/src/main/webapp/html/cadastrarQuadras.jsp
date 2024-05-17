@@ -1,4 +1,4 @@
-<%@ page import="br.com.futebolize.model.User" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%// @Desenvolvido por: Matheus Campos & Gabriel Alves %>
