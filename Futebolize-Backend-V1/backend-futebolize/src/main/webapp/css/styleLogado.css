@@ -309,7 +309,7 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
-    display: flex;
-    flex-flow: column;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

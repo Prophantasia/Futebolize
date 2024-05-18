@@ -169,13 +169,13 @@ h2#link-quadra a:hover {
 }
 
 footer {
-    background-color: RGB(30, 30, 30);
+    background-color: #1f1e1e;
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
-    display: flex;
-    flex-flow: column;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 p {

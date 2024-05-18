@@ -5,8 +5,6 @@
 
 <%
     // Verifica se o atributo na sessão é null
-
-
     UserDao userDao = new UserDao();
     User userServer = new User();
     userServer.setEmail(request.getSession().getAttribute("email").toString());
@@ -91,6 +89,7 @@
     </nav>
 
 </header>
+<main>
 
     <h1>
         <BR><BR><BR>
@@ -109,11 +108,13 @@
         <p>Deseja cadastrar uma quadra?<a href="cadastrarQuadras.jsp">Clique aqui!</a></p>
 
     </div>
+</main>
 
 <footer>
     <p>&copy; 2024 - Todos os direitos reservados</p>
     <p>Entre em contato pelo e-mail: futebolize@contato.com</p>
 </footer>
+
 <script src="../javascript/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
 </body>

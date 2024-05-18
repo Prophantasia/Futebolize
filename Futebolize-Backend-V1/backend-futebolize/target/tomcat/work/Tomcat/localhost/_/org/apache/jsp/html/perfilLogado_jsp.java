@@ -14,7 +14,7 @@ import javax.servlet.jsp.*;
 import br.com.futebolize.model.User;
 import br.com.futebolize.dao.UserDao;
 
-public final class perfil_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class perfilLogado_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final javax.servlet.jsp.JspFactory _jspxFactory =
@@ -65,8 +65,11 @@ public final class perfil_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
 
-
+    // Verifica se o atributo na sessão é null
+    if(request.getSession().getAttribute("usuarioLogado") == null)
+        response.sendRedirect("../index.jsp");
     UserDao userDao = new UserDao();
     User user = new User();
 
@@ -77,13 +80,7 @@ public final class perfil_jsp extends org.apache.jasper.runtime.HttpJspBase
     // Metódo para buscar o registro do usuário via email e senha
     User resp = userDao.buscarUser(user);
 
-    if(request.getSession().getAttribute("usuarioLogado") == null){
-        response.sendRedirect("../index.jsp");
-    } else {
-        if(user.getRole().equals("default")){
-            response.sendRedirect("perfilLogado.jsp");
-        }
-    }
+
 
       out.write("\r\n");
       out.write("\r\n");
@@ -97,7 +94,7 @@ public final class perfil_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1\">\r\n");
       out.write("    <title>Futebolize</title>\r\n");
       out.write("    <link rel=\"icon\" href=\"../assets/images/ball.ico\">\r\n");
-      out.write("    <link href=\"../css/perfil.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n");
+      out.write("    <link href=\"../css/perfilLogado.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n");
       out.write("    <link href=\"../css/ui.css\" rel=\"stylesheet\">\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
@@ -114,7 +111,6 @@ public final class perfil_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\r\n");
       out.write("        <ul class=\"nav-list\">\r\n");
       out.write("            <li><a href=\"quadras.jsp\">QUADRAS</a></li>\r\n");
-      out.write("            <li><a href=\"cadastrarQuadras.jsp\">CADASTRAR QUADRA</a></li>\r\n");
       out.write("            <li><a href=\"sair.jsp\">SAIR</a></li>\r\n");
       out.write("        </ul>\r\n");
       out.write("    </nav>\r\n");
