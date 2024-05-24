@@ -208,7 +208,7 @@ footer {
   overflow: hidden;
   color: white;
   text-align: center;
-  animation: typing 5s steps(30), blinking 0.5s infinite step-end alternate;
+  animation: typing 5s steps(30) forwards, blinking 0.5s infinite step-end alternate;
 }
 
 @keyframes typing {
