@@ -184,32 +184,45 @@ p {
     color: #eeeeee;
 }
 
-.quadras{
+.quadras {
     padding-top: 100px;
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
-.quadras #quadras_1{
+.quadras #quadras_1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 50px;
 }
 
-.quadras img{
-    display: flex;
-    flex-wrap: wrap;
+.quadra_1, .quadra_2, .quadra_3, .quadra_4, .quadra_5, .quadra_6 {
+    text-align: center;
+}
+
+.quadras img {
     width: 320px;
     height: 320px;
     border-radius: 8px;
-    margin: 3px;
     border-width: 3px;
     border-style: solid;
     border-color: beige;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .075),
+                0 1px 2px rgba(0, 0, 0, .075),
+                1px 2px 4px rgba(0, 0, 0, .075),
+                1px 3px 8px rgba(0, 0, 0, .075),
+                2px 4px 16px rgba(0, 0, 0, .075);
+    margin: 0 auto; /* Centraliza a imagem */
 }
 
+.quadras p {
+    margin: 5px 0;
+}
+.quadras p {
+position: center;
+}
 
 
 

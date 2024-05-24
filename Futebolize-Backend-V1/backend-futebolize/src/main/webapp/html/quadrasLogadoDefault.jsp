@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="br.com.futebolize.dao.SearchFieldDao"%>
 <%@ page import="br.com.futebolize.model.Field" %>
@@ -11,7 +10,6 @@
     if(request.getSession().getAttribute("usuarioLogado") == null){
         response.sendRedirect("quadras.jsp");
     }
-
 %>
 
 <html>
@@ -35,22 +33,14 @@
         <div class="line3"></div>
     </div>
     <ul class="nav-list">
+
         <li><a href="perfil.jsp">MEU PERFIL</a></li>
         <li><a href="sair.jsp">SAIR</a></li>
     </ul>
 </nav>
 
-<div id="divContainer">
+<div id="divContainer"></div>
 
-</div>
-
-<!--Funcionalidade de checkbox para implementar-->
-<!--<input type="checkbox" id="coracao" />
-<label for="coracao">
-    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#19b425">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-    </svg>
-</label>-->
 <script>
     window.onload = function() {
         var divContainer = document.getElementById("divContainer");
@@ -61,7 +51,7 @@
                 div.className = "quadra";
 
                 var img = document.createElement("img");
-                img.src = "../img/"+quadrasData[i].imagePath;
+                img.src = "../img/" + quadrasData[i].imagePath;
                 img.alt = "Imagem";
                 div.appendChild(img);
 
@@ -73,6 +63,45 @@
                 p2.textContent = quadrasData[i].address;
                 div.appendChild(p2);
 
+                // Criar uma função de encerramento para cada botão
+                (function(i) {
+                    var botao = document.createElement("button");
+                    botao.textContent = "Se inscrever";
+                    botao.classList.add("user-button");
+
+                    var iconeUsuario = document.createElement("i");
+                    iconeUsuario.classList.add("fas", "fa-check");
+                    botao.appendChild(iconeUsuario);
+
+                    botao.onclick = function() {
+                        if (botao.textContent === "Se inscrever") {
+                            Swal.fire({
+                                title: "Presença Garantida!",
+                                text: "Você se inscreveu para utilizar esta quadra.",
+                                imageUrl: "https://imagem.natelinha.uol.com.br/original/Neymar_366ecd1b4137dea7853213d6facff5306cbdc23e.jpeg",
+                                imageWidth: 400,
+                                imageHeight: 200,
+                                imageAlt: "Custom image"
+                            });
+                            botao.style.backgroundColor = "#dc3545";
+                            botao.textContent = "Remover presença";
+                        } else {
+                            Swal.fire({
+                                title: "Presença Removida!",
+                                text: "Você removeu sua inscrição desta quadra.",
+                                imageUrl: "https://th.bing.com/th/id/OIP.If2-jLDiNwglFgS5nyNH_QHaFj?rs=1&pid=ImgDetMain",
+                                imageWidth: 400,
+                                imageHeight: 200,
+                                imageAlt: "Custom image"
+                            });
+                            botao.style.backgroundColor = "";
+                            botao.textContent = "Se inscrever";
+                            botao.appendChild(iconeUsuario);
+
+                        }
+                    }
+                    div.appendChild(botao);
+                })(i); // Passa o índice atual para a função de encerramento
 
                 divContainer.appendChild(div);
             }
@@ -94,13 +123,13 @@
 
         createDiv(quadrasData.length);
     };
-
 </script>
 
 <footer>
     <p>&copy; 2024 - Todos os direitos reservados</p>
     <p>Entre em contato pelo e-mail: futebolize@contato.com</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
-

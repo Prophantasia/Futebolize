@@ -190,7 +190,10 @@ p {
     width: 320px;
     height: 320px;
     border-radius: 8px;
-    margin: 3px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
     display: flex;
     flex-wrap: wrap;
     border-width: 3px;
@@ -199,6 +202,8 @@ p {
     box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
 
 }
+
+
 
 label{ cursor: pointer;}
 #coracao { display: none;}
@@ -214,6 +219,28 @@ label{ cursor: pointer;}
     100% {
         fill: #19b425;
     }
+}
+
+.user-button {
+    background-color: #28a745; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de apontar */
+    outline: none; /* Sem contorno ao focar */
+    transition: background-color 0.3s; /* Transição suave */
+    display: block;
+    margin: 10px auto 0 auto; }
+
+/* Estilos para o ícone dentro do botão */
+.user-button i {
+    margin-right: 5px; /* Espaçamento à direita */
+}
+
+/* Estilos de hover para o botão */
+.user-button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 

@@ -36,6 +36,7 @@
     <ul class="nav-list">
       <li><a href="quadras.jsp">QUADRAS</a></li>
       <li><a href="perfil.jsp">MEU PERFIL</a></li>
+      <li><a href="sair.jsp">SAIR</a></li>
     </ul>
   </nav>
 
