@@ -13,19 +13,10 @@
 
     if(request.getSession().getAttribute("usuarioLogado") == null){
         response.sendRedirect("../index.jsp");
-
-    } else  {
+    } else {
         if(user.getRole().equals("default")){
             response.sendRedirect("indexLogadoDefault.jsp");
-        } else {
-             request.getSession().removeAttribute("email");
-             request.getSession().removeAttribute("pass");
-             request.getSession().removeAttribute("usuarioLogado");
-             request.getSession().invalidate();
-             response.sendRedirect("../index.jsp");
         }
-
-
     }
 
 %>
